@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leomark Marcus — Data Analyst &amp; Software Developer</title>
+<meta name="description" content="Leomark Marcus — Data Analyst and Software Developer based in Kota Kinabalu, Sabah. BSc (Hons.) Mathematics with Computer Graphics, Universiti Malaysia Sabah.">
+<meta property="og:title" content="Leomark Marcus — Data Analyst &amp; Software Developer">
+<meta property="og:description" content="Final-year Mathematics with Computer Graphics student with internship experience building software and data systems.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231B2A4A'/><text y='.9em' x='50%25' text-anchor='middle' font-size='60' fill='%232CA6A4' font-family='sans-serif' font-weight='bold'>L</text></svg>">
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="brand">LM</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#certs">Certifications</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section id="top" class="hero">
+  <div class="wrap hero-inner">
+    <img class="avatar" src="assets/photo.jpg" alt="Leomark Marcus" width="248" height="333">
+    <div class="hero-text">
+      <p class="eyebrow">Kota Kinabalu, Sabah &middot; Malaysia</p>
+      <h1>Leomark Marcus</h1>
+      <p class="role">Data Analyst &amp; Software Developer</p>
+      <p class="pitch">
+        Final-year <strong>Mathematics with Computer Graphics</strong> student at Universiti Malaysia Sabah.
+        I spent my internship building software that people actually use every day &mdash; supplier
+        management, budgeting and asset tracking systems for a palm oil mill &mdash; and my final year
+        project on deep learning for thermal object detection.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="assets/Leomark_Marcus_Resume.pdf" download>Download Resume</a>
+        <a class="btn" href="https://github.com/lmrkmrcs" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/leomarkmarcus" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="mailto:leomark.marcus0202@gmail.com">Email</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="band">
+  <div class="wrap about-grid">
+    <div>
+      <h2>About</h2>
+      <p>
+        I like problems where the data is messy and the constraints are real. During my internship at a
+        palm oil mill in Sabah I built systems for staff with no admin rights on ageing Windows machines,
+        working from spreadsheets that had drifted into four different shapes &mdash; which turned out to
+        teach me more than any tidy dataset could.
+      </p>
+      <p>
+        I&rsquo;m looking for an <strong>entry-level Data Analyst or Software Developer</strong> role in
+        Kota Kinabalu, where I can keep working on that intersection of data, tooling and the people who
+        have to use it.
+      </p>
+    </div>
+    <dl class="facts">
+      <div><dt>Degree</dt><dd>BSc (Hons.) Mathematics with Computer Graphics</dd></div>
+      <div><dt>University</dt><dd>Universiti Malaysia Sabah</dd></div>
+      <div><dt>Graduating</dt><dd>December 2026 &middot; CGPA 3.15</dd></div>
+      <div><dt>Internship</dt><dd>Software Developer Intern, palm oil mill (Mar&ndash;Aug 2026)</dd></div>
+      <div><dt>Languages</dt><dd>Malay &amp; Kadazan-Dusun (native), English (fluent)</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="wrap section">
+  <h2>Projects</h2>
+  <p class="lede">Nine projects across deep learning, production software, design and games. Every one links to its repository.</p>
+
+  <div class="grid">
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">
+        <img src="assets/projects/01_fyp.jpg" alt="Thermal detection with bounding boxes on cars and a pedestrian" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-hl">Final Year Project</span>
+        <h3>YOLOv5 Thermal Object Detection</h3>
+        <p>Efficiency analysis of transfer learning for thermal imagery in ADAS. Fine-tuned on FLIR thermal data on a laptop with no GPU &mdash; a single epoch reached <strong>0.78 mAP on cars</strong> and <strong>0.75 on people</strong>. Includes a custom PyQt5 training dashboard, thesis and conference poster.</p>
+        <p class="stack">Python &middot; PyTorch &middot; YOLOv5 &middot; PyQt5</p>
+        <a class="link" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/medical-image-classification-cnn" target="_blank" rel="noopener">
+        <img src="assets/projects/02_cnn.jpg" alt="Training curves and overfitting monitor" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Machine Learning</span>
+        <h3>Medical Image Classification</h3>
+        <p>One PyQt5 interface driving the <em>same</em> CNN workflow in <strong>both TensorFlow and PyTorch</strong>. Brain tumour MRI across four classes and breast histopathology, with live training curves, an overfitting monitor and confusion matrices. Demo run: <strong>83% test accuracy</strong>.</p>
+        <p class="stack">Python &middot; TensorFlow &middot; PyTorch &middot; OpenCV</p>
+        <a class="link" href="https://github.com/lmrkmrcs/medical-image-classification-cnn" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/alfred-ai-agent" target="_blank" rel="noopener">
+        <img src="assets/projects/03_alfred.jpg" alt="Alfred AI butler chat interface" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">AI Agents</span>
+        <h3>Alfred &mdash; AI Butler Agent</h3>
+        <p>A <code>CodeAgent</code> that reasons in code, choosing between live web search and three custom tools before composing an answer. Built for the Hugging Face AI Agents course with a Gradio chat interface.</p>
+        <p class="stack">Python &middot; smolagents &middot; Gradio &middot; Hugging Face</p>
+        <a class="link" href="https://github.com/lmrkmrcs/alfred-ai-agent" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/ffb-supplier-management-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/04_ffb.jpg" alt="FFB supplier management table" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>FFB Supplier Management</h3>
+        <p>Hundreds of palm oil suppliers across four collecting centres, each centre keeping a differently-shaped Excel file. Reads legacy spreadsheets <em>positionally</em> so broken headers still load, merges certification data by normalised name, and tracks MPOB licence expiry. Asked to build four systems; proposed one instead.</p>
+        <p class="stack">Python &middot; PyQt6 &middot; pandas</p>
+        <a class="link" href="https://github.com/lmrkmrcs/ffb-supplier-management-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/ffb-budget-management-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/05_budget.jpg" alt="Budget management web interface" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>Budget Management System</h3>
+        <p>Office PCs had no admin rights, so nothing could be installed. Built the server against Python&rsquo;s standard library alone &mdash; no framework, no database &mdash; packaged as a click-to-run executable. Any phone on the same WiFi reaches it by scanning a QR code. Fully bilingual EN/MS.</p>
+        <p class="stack">Python (stdlib) &middot; Tkinter &middot; React</p>
+        <a class="link" href="https://github.com/lmrkmrcs/ffb-budget-management-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/hr-employee-records-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/06_hr.jpg" alt="HR employee records system" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>HR Employee Records</h3>
+        <p>Employee records and workplace accident reporting. Maps spreadsheet columns by keyword so HR never had to reformat their files, and routes impossible values to <code>Unknown</code> rather than silently corrupting demographic reports. Styled Excel and PDF export.</p>
+        <p class="stack">Python &middot; CustomTkinter &middot; pandas &middot; ReportLab</p>
+        <a class="link" href="https://github.com/lmrkmrcs/hr-employee-records-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/office-asset-tracker-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/07_asset.jpg" alt="Office asset register" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>Office Asset Tracker</h3>
+        <p>An asset register for old, locked-down Windows machines &mdash; SQLite in a single file beside the executable, lifecycle status so broken items are marked rather than deleted, and printable QR + barcode labels that tie each database row back to the physical object.</p>
+        <p class="stack">Python &middot; Tkinter &middot; SQLite</p>
+        <a class="link" href="https://github.com/lmrkmrcs/office-asset-tracker-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/nutralife-app-design" target="_blank" rel="noopener">
+        <img src="assets/projects/08_nutralife.jpg" alt="NutraLife app home screen" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-design">UI/UX Design</span>
+        <h3>NutraLife &mdash; Nutrition App</h3>
+        <p>31 Figma screens for a nutrition tracker with Apple Watch integration. Scan food with the camera, then see what it <em>costs</em> against your goals &mdash; <em>&ldquo;58 min walk to burn&rdquo;</em> rather than an abstract calorie count. Includes an interactive prototype.</p>
+        <p class="stack">Figma &middot; UI/UX &middot; Prototyping</p>
+        <a class="link" href="https://github.com/lmrkmrcs/nutralife-app-design" target="_blank" rel="noopener">View case study &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">
+        <img src="assets/projects/09_knight.jpg" alt="Knight Parkour title screen" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-design">Game Development</span>
+        <h3>Knight Parkour</h3>
+        <p>A 2D pixel-art platformer in Unity &mdash; four levels, a health system, and five hazards that each run as an independent state machine, tuned entirely from the inspector so the same prefab plays differently in level one and level four.</p>
+        <p class="stack">Unity 6 &middot; C# &middot; 2D Physics</p>
+        <a class="link" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section id="skills" class="band">
+  <div class="wrap section">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skillset">
+        <h3>Data &amp; Analytics</h3>
+        <ul><li>Microsoft Power BI</li><li>Power Query</li><li>Advanced Excel</li><li>pandas &middot; NumPy</li><li>SQL</li></ul>
+      </div>
+      <div class="skillset">
+        <h3>Machine Learning</h3>
+        <ul><li>PyTorch</li><li>TensorFlow / Keras</li><li>YOLOv5</li><li>scikit-learn</li><li>smolagents</li></ul>
+      </div>
+      <div class="skillset">
+        <h3>Programming</h3>
+        <ul><li>Python</li><li>C++ &middot; C</li><li>C#</li><li>JavaScript / React</li><li>HTML &amp; CSS</li></ul>
+      </div>
+      <div class="skillset">
+        <h3>Applications</h3>
+        <ul><li>PyQt6 / PyQt5</li><li>Tkinter / CustomTkinter</li><li>Streamlit &middot; Gradio</li><li>SQLite</li><li>PyInstaller</li></ul>
+      </div>
+      <div class="skillset">
+        <h3>Tools &amp; Design</h3>
+        <ul><li>Git &amp; GitHub</li><li>Figma</li><li>Unity</li><li>Google Apps Script</li><li>AppSheet</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CERTIFICATIONS ===== -->
+<section id="certs" class="wrap section">
+  <h2>Certifications</h2>
+  <p class="lede">11 certificates earned during <strong>National Training Week 2026</strong>.</p>
+  <div class="certs">
+    <div class="certgroup">
+      <h3>Data &amp; Analytics</h3>
+      <ul>
+        <li>Become a Data Analyst with Microsoft Power BI</li>
+        <li>R.O.C.K. Your Data with Power Query</li>
+        <li>Conquer Messy Data: Excel Tips &amp; Tricks</li>
+        <li>GoogleSheet: AppSheet</li>
+      </ul>
+    </div>
+    <div class="certgroup">
+      <h3>AI &amp; Automation</h3>
+      <ul>
+        <li>AI for the Workplace</li>
+        <li>AI-Powered Workflow Automation</li>
+        <li>AI Meets Cybersecurity (CompTIA SecAI+)</li>
+      </ul>
+    </div>
+    <div class="certgroup">
+      <h3>Cybersecurity</h3>
+      <ul>
+        <li>Think Smart, Stay Safe: First Step into Cyber Security</li>
+        <li>Cybersecurity &amp; AI Threat Awareness</li>
+        <li>Cybersecurity Awareness for Leadership</li>
+      </ul>
+    </div>
+    <div class="certgroup">
+      <h3>Productivity</h3>
+      <ul>
+        <li>Microsoft Office Essentials for Productivity</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <h2>Get in touch</h2>
+    <p>Open to entry-level Data Analyst and Software Developer roles in Kota Kinabalu and across Sabah.</p>
+    <div class="cta">
+      <a class="btn primary" href="mailto:leomark.marcus0202@gmail.com">leomark.marcus0202@gmail.com</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/leomarkmarcus" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn ghost" href="https://github.com/lmrkmrcs" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn ghost" href="assets/Leomark_Marcus_Resume.pdf" download>Resume (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Leomark Marcus &middot; Kota Kinabalu, Sabah</p>
+  </div>
+</footer>
+
+</body>
+</html>
