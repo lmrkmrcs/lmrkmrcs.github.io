@@ -18,6 +18,7 @@
     <a href="#top" class="brand">LM</a>
     <nav>
       <a href="#projects">Projects</a>
+      <a href="#excel">Excel</a>
       <a href="#skills">Skills</a>
       <a href="#certs">Certifications</a>
       <a href="#leadership">Leadership</a>
@@ -198,6 +199,51 @@
         <p class="stack">Unity 6 &middot; C# &middot; 2D Physics</p>
         <a class="link" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">View repository &rarr;</a>
       </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== EXCEL & DATA WORK ===== -->
+<section id="excel" class="wrap section">
+  <h2>Excel &amp; Data Work</h2>
+  <p class="lede">
+    Two workbooks I built during the internship. The files are not published here, since they hold real
+    company figures and employee records, so what follows describes the work rather than offering a download.
+  </p>
+
+  <div class="datawork">
+
+    <article class="data-item">
+      <h3>Employee Leave Record 2026</h3>
+      <p class="data-meta">Built from scratch &middot; HR</p>
+      <p>
+        A leave tracker sized for around 180 employees, designed to be handed over rather than kept alive by me.
+        Years of service calculate from the join date, annual and sick leave balances maintain themselves as days
+        are entered, and hospitalisation is held to its 60-day ceiling.
+      </p>
+      <ul>
+        <li>A dashboard sheet counts anyone over entitlement and flags rows still missing a join date, so errors surface instead of sitting unnoticed in the file</li>
+        <li>Job titles live on their own sheet and feed a dropdown, with written instructions so HR can add one without touching a formula</li>
+        <li>An instructions sheet up front, so the workbook explains itself to whoever inherits it</li>
+      </ul>
+      <p class="stack">Excel &middot; Formulas &middot; Data validation &middot; Dashboard</p>
+    </article>
+
+    <article class="data-item">
+      <h3>FFB Collecting Budget Workbook</h3>
+      <p class="data-meta">Rebuilt from a broken template &middot; Internship</p>
+      <p>
+        The budget template I inherited had drifted out of shape. One sheet was titled for one collecting centre
+        but held another centre&rsquo;s figures, a second repeated a third centre&rsquo;s numbers, and the per-tonne
+        columns referenced the wrong cells, reporting a few sen per tonne where the real cost ran to tens of ringgit.
+      </p>
+      <ul>
+        <li>Rebuilt into a single sheet that reconciles: three collecting centres, fifteen cost categories with a transport breakdown nested under its parent line, and five financial years carrying both forecast and actual columns</li>
+        <li>Became the data source the budget application reads from, so the spreadsheet and the software agree instead of drifting apart again</li>
+        <li>The import script re-checks every site and year against the sheet&rsquo;s own grand totals and refuses to run if they disagree</li>
+      </ul>
+      <p class="stack">Excel &middot; openpyxl &middot; Data cleaning</p>
     </article>
 
   </div>
