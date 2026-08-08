@@ -27,6 +27,8 @@
   </div>
 </header>
 
+<main id="home">
+
 <!-- ===== HERO ===== -->
 <section id="top" class="hero">
   <div class="wrap hero-inner">
@@ -80,175 +82,76 @@
 <!-- ===== PROJECTS ===== -->
 <section id="projects" class="wrap section">
   <h2>Projects</h2>
-  <p class="lede">Nine projects across deep learning, production software, design and games. Every one links to its repository.</p>
+  <p class="lede">Nine projects, grouped by where they came from. Pick a category to open it.</p>
 
-  <div class="grid">
+  <div class="grid grid-2">
 
     <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">
+      <a class="shot" href="#/uni">
         <img src="assets/projects/01_fyp.jpg" alt="Thermal detection with bounding boxes on cars and a pedestrian" loading="lazy">
       </a>
       <div class="card-body">
-        <span class="tag tag-hl">Final Year Project</span>
-        <h3>YOLOv5 Thermal Object Detection</h3>
-        <p>Efficiency analysis of transfer learning for thermal imagery in ADAS. Fine-tuned on FLIR thermal data on a laptop with no GPU, and a single epoch still reached <strong>0.78 mAP on cars</strong> and <strong>0.75 on people</strong>. Includes a custom PyQt5 training dashboard, thesis and conference poster.</p>
-        <p class="stack">Python &middot; PyTorch &middot; YOLOv5 &middot; PyQt5</p>
-        <a class="link" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">View repository &rarr;</a>
+        <span class="tag">University</span>
+        <h3>University Projects</h3>
+        <p>Five projects from the degree: a final year thesis on thermal object detection, a medical imaging CNN built twice in two frameworks, an AI agent that reasons in code, a 31-screen app design, and a Unity platformer.</p>
+        <p class="stack">Deep learning &middot; AI agents &middot; UI/UX &middot; Game development</p>
+        <a class="link" href="#/uni">View 5 projects &rarr;</a>
       </div>
     </article>
 
     <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/medical-image-classification-cnn" target="_blank" rel="noopener">
-        <img src="assets/projects/02_cnn.jpg" alt="Training curves and overfitting monitor" loading="lazy">
-      </a>
-      <div class="card-body">
-        <span class="tag">Machine Learning</span>
-        <h3>Medical Image Classification</h3>
-        <p>One PyQt5 interface driving the <em>same</em> CNN workflow in <strong>both TensorFlow and PyTorch</strong>. Brain tumour MRI across four classes and breast histopathology, with live training curves, an overfitting monitor and confusion matrices. Demo run: <strong>83% test accuracy</strong>.</p>
-        <p class="stack">Python &middot; TensorFlow &middot; PyTorch &middot; OpenCV</p>
-        <a class="link" href="https://github.com/lmrkmrcs/medical-image-classification-cnn" target="_blank" rel="noopener">View repository &rarr;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/alfred-ai-agent" target="_blank" rel="noopener">
-        <img src="assets/projects/03_alfred.jpg" alt="Alfred AI butler chat interface" loading="lazy">
-      </a>
-      <div class="card-body">
-        <span class="tag">AI Agents</span>
-        <h3>Alfred: AI Butler Agent</h3>
-        <p>A <code>CodeAgent</code> that reasons in code, choosing between live web search and three custom tools before composing an answer. Built for the Hugging Face AI Agents course with a Gradio chat interface.</p>
-        <p class="stack">Python &middot; smolagents &middot; Gradio &middot; Hugging Face</p>
-        <a class="link" href="https://github.com/lmrkmrcs/alfred-ai-agent" target="_blank" rel="noopener">View repository &rarr;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/ffb-supplier-management-demo" target="_blank" rel="noopener">
+      <a class="shot" href="#/internship">
         <img src="assets/projects/04_ffb.jpg" alt="FFB supplier management table" loading="lazy">
       </a>
       <div class="card-body">
         <span class="tag tag-work">Internship</span>
-        <h3>FFB Supplier Management</h3>
-        <p>Hundreds of palm oil suppliers across four collecting centres, each centre keeping a differently-shaped Excel file. Reads legacy spreadsheets <em>positionally</em> so broken headers still load, merges certification data by normalised name, and tracks MPOB licence expiry. Asked to build four systems; proposed one instead.</p>
-        <p class="stack">Python &middot; PyQt6 &middot; pandas</p>
-        <a class="link" href="https://github.com/lmrkmrcs/ffb-supplier-management-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/ffb-budget-management-demo" target="_blank" rel="noopener">
-        <img src="assets/projects/05_budget.jpg" alt="Budget management web interface" loading="lazy">
-      </a>
-      <div class="card-body">
-        <span class="tag tag-work">Internship</span>
-        <h3>Budget Management System</h3>
-        <p>Office PCs had no admin rights, so nothing could be installed. Built the server against Python&rsquo;s standard library alone, with no framework and no database, then packaged it as a click-to-run executable. Any phone on the same WiFi reaches it by scanning a QR code. Fully bilingual EN/MS.</p>
-        <p class="stack">Python (stdlib) &middot; Tkinter &middot; React</p>
-        <a class="link" href="https://github.com/lmrkmrcs/ffb-budget-management-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/hr-employee-records-demo" target="_blank" rel="noopener">
-        <img src="assets/projects/06_hr.jpg" alt="HR employee records system" loading="lazy">
-      </a>
-      <div class="card-body">
-        <span class="tag tag-work">Internship</span>
-        <h3>HR Employee Records</h3>
-        <p>Employee records and workplace accident reporting. Maps spreadsheet columns by keyword so HR never had to reformat their files, and routes impossible values to <code>Unknown</code> rather than silently corrupting demographic reports. Styled Excel and PDF export.</p>
-        <p class="stack">Python &middot; CustomTkinter &middot; pandas &middot; ReportLab</p>
-        <a class="link" href="https://github.com/lmrkmrcs/hr-employee-records-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/office-asset-tracker-demo" target="_blank" rel="noopener">
-        <img src="assets/projects/07_asset.jpg" alt="Office asset register" loading="lazy">
-      </a>
-      <div class="card-body">
-        <span class="tag tag-work">Internship</span>
-        <h3>Office Asset Tracker</h3>
-        <p>An asset register for old, locked-down Windows machines. SQLite sits in a single file beside the executable, lifecycle status means broken items are marked rather than deleted, and printable QR + barcode labels tie each database row back to the physical object.</p>
-        <p class="stack">Python &middot; Tkinter &middot; SQLite</p>
-        <a class="link" href="https://github.com/lmrkmrcs/office-asset-tracker-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/nutralife-app-design" target="_blank" rel="noopener">
-        <img src="assets/projects/08_nutralife.jpg" alt="NutraLife app home screen" loading="lazy">
-      </a>
-      <div class="card-body">
-        <span class="tag tag-design">UI/UX Design</span>
-        <h3>NutraLife Nutrition App</h3>
-        <p>31 Figma screens for a nutrition tracker with Apple Watch integration. Scan food with the camera, then see what it <em>costs</em> against your goals, so a meal reads as <em>&ldquo;58 min walk to burn&rdquo;</em> rather than an abstract calorie count. Includes an interactive prototype.</p>
-        <p class="stack">Figma &middot; UI/UX &middot; Prototyping</p>
-        <a class="link" href="https://github.com/lmrkmrcs/nutralife-app-design" target="_blank" rel="noopener">View case study &rarr;</a>
-      </div>
-    </article>
-
-    <article class="card">
-      <a class="shot" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">
-        <img src="assets/projects/09_knight.jpg" alt="Knight Parkour title screen" loading="lazy">
-      </a>
-      <div class="card-body">
-        <span class="tag tag-design">Game Development</span>
-        <h3>Knight Parkour</h3>
-        <p>A 2D pixel-art platformer in Unity with four levels, a health system, and five hazards that each run as an independent state machine, tuned entirely from the inspector so the same prefab plays differently in level one and level four.</p>
-        <p class="stack">Unity 6 &middot; C# &middot; 2D Physics</p>
-        <a class="link" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">View repository &rarr;</a>
+        <h3>Internship Projects</h3>
+        <p>Four systems built and handed over at a palm oil mill in Sabah, every one of them shaped by the same constraint: office PCs with no admin rights, so nothing could be installed.</p>
+        <p class="stack">Python &middot; PyQt6 &middot; pandas &middot; SQLite</p>
+        <a class="link" href="#/internship">View 4 projects &rarr;</a>
       </div>
     </article>
 
   </div>
 </section>
-
 <!-- ===== EXCEL & DATA WORK ===== -->
 <section id="excel" class="wrap section">
   <h2>Excel &amp; Data Work</h2>
   <p class="lede">
-    Two workbooks I built during the internship. The files are not published here, since they hold real
-    company figures and employee records, so what follows describes the work rather than offering a download.
+    Two workbooks from the internship. The files themselves are not published, since they hold real company
+    figures and employee records, so every screenshot here is a rebuild with invented names and numbers.
   </p>
 
-  <div class="datawork">
+  <div class="grid grid-2">
 
-    <article class="data-item">
-      <h3>Employee Leave Record 2026</h3>
-      <p class="data-meta">Built from scratch &middot; HR</p>
-      <p>
-        A leave tracker sized for around 180 employees, designed to be handed over rather than kept alive by me.
-        Years of service calculate from the join date, annual and sick leave balances maintain themselves as days
-        are entered, and hospitalisation is held to its 60-day ceiling.
-      </p>
-      <ul>
-        <li>A dashboard sheet counts anyone over entitlement and flags rows still missing a join date, so errors surface instead of sitting unnoticed in the file</li>
-        <li>Job titles live on their own sheet and feed a dropdown, with written instructions so HR can add one without touching a formula</li>
-        <li>An instructions sheet up front, so the workbook explains itself to whoever inherits it</li>
-      </ul>
-      <p class="stack">Excel &middot; Formulas &middot; Data validation &middot; Dashboard</p>
+    <article class="card">
+      <a class="shot" href="#/leave-record">
+        <img src="assets/projects/10_leave.png" alt="Employee leave record spreadsheet with colour-coded manual and calculated columns" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Excel &middot; HR</span>
+        <h3>Employee Leave Record 2026</h3>
+        <p>A leave tracker for around 180 employees, built from scratch and designed to be handed over rather than kept alive by me. Service years, leave balances and a 60-day hospitalisation ceiling all calculate themselves, and a dashboard counts anyone over entitlement.</p>
+        <p class="stack">Excel &middot; Formulas &middot; Data validation &middot; Dashboard</p>
+        <a class="link" href="#/leave-record">View details &rarr;</a>
+      </div>
     </article>
 
-    <article class="data-item">
-      <h3>FFB Collecting Budget Workbook</h3>
-      <p class="data-meta">Rebuilt from a broken template &middot; Internship</p>
-      <p>
-        The budget template I inherited had drifted out of shape. One sheet was titled for one collecting centre
-        but held another centre&rsquo;s figures, a second repeated a third centre&rsquo;s numbers, and the per-tonne
-        columns referenced the wrong cells, reporting a few sen per tonne where the real cost ran to tens of ringgit.
-      </p>
-      <ul>
-        <li>Rebuilt into a single sheet that reconciles: three collecting centres, fifteen cost categories with a transport breakdown nested under its parent line, and five financial years carrying both forecast and actual columns</li>
-        <li>Became the data source the budget application reads from, so the spreadsheet and the software agree instead of drifting apart again</li>
-        <li>The import script re-checks every site and year against the sheet&rsquo;s own grand totals and refuses to run if they disagree</li>
-      </ul>
-      <p class="stack">Excel &middot; openpyxl &middot; Data cleaning</p>
+    <article class="card">
+      <a class="shot" href="#/budget-workbook">
+        <img src="assets/projects/11_budgetxls.png" alt="Rebuilt FFB collecting budget sheet with forecast and actual columns" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Excel &middot; Internship</span>
+        <h3>FFB Collecting Budget Workbook</h3>
+        <p>The template I inherited had drifted: a sheet titled for one collecting centre while holding another&rsquo;s figures, and per-tonne columns referencing the wrong cells. Rebuilt into one sheet that reconciles, which then became the data source the budget application reads from.</p>
+        <p class="stack">Excel &middot; openpyxl &middot; Data cleaning</p>
+        <a class="link" href="#/budget-workbook">View details &rarr;</a>
+      </div>
     </article>
 
   </div>
 </section>
-
 <!-- ===== SKILLS ===== -->
 <section id="skills" class="band">
   <div class="wrap section">
@@ -362,11 +265,210 @@
   </div>
 </section>
 
+</main>
+
+<div id="views">
+
+<section id="v-uni" class="wrap section" hidden>
+  <a class="back" href="#projects">&larr; Back to Projects</a>
+  <h2>University Projects</h2>
+  <p class="lede">Five projects from my degree, covering deep learning, AI agents, interface design and games.</p>
+  <div class="grid">
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">
+        <img src="assets/projects/01_fyp.jpg" alt="Thermal detection with bounding boxes on cars and a pedestrian" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-hl">Final Year Project</span>
+        <h3>YOLOv5 Thermal Object Detection</h3>
+        <p>Efficiency analysis of transfer learning for thermal imagery in ADAS. Fine-tuned on FLIR thermal data on a laptop with no GPU, and a single epoch still reached <strong>0.78 mAP on cars</strong> and <strong>0.75 on people</strong>. Includes a custom PyQt5 training dashboard, thesis and conference poster.</p>
+        <p class="stack">Python &middot; PyTorch &middot; YOLOv5 &middot; PyQt5</p>
+        <a class="link" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/medical-image-classification-cnn" target="_blank" rel="noopener">
+        <img src="assets/projects/02_cnn.jpg" alt="Training curves and overfitting monitor" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Machine Learning</span>
+        <h3>Medical Image Classification</h3>
+        <p>One PyQt5 interface driving the <em>same</em> CNN workflow in <strong>both TensorFlow and PyTorch</strong>. Brain tumour MRI across four classes and breast histopathology, with live training curves, an overfitting monitor and confusion matrices. Demo run: <strong>83% test accuracy</strong>.</p>
+        <p class="stack">Python &middot; TensorFlow &middot; PyTorch &middot; OpenCV</p>
+        <a class="link" href="https://github.com/lmrkmrcs/medical-image-classification-cnn" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/alfred-ai-agent" target="_blank" rel="noopener">
+        <img src="assets/projects/03_alfred.jpg" alt="Alfred AI butler chat interface" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">AI Agents</span>
+        <h3>Alfred: AI Butler Agent</h3>
+        <p>A <code>CodeAgent</code> that reasons in code, choosing between live web search and three custom tools before composing an answer. Built for the Hugging Face AI Agents course with a Gradio chat interface.</p>
+        <p class="stack">Python &middot; smolagents &middot; Gradio &middot; Hugging Face</p>
+        <a class="link" href="https://github.com/lmrkmrcs/alfred-ai-agent" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/nutralife-app-design" target="_blank" rel="noopener">
+        <img src="assets/projects/08_nutralife.jpg" alt="NutraLife app home screen" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-design">UI/UX Design</span>
+        <h3>NutraLife Nutrition App</h3>
+        <p>31 Figma screens for a nutrition tracker with Apple Watch integration. Scan food with the camera, then see what it <em>costs</em> against your goals, so a meal reads as <em>&ldquo;58 min walk to burn&rdquo;</em> rather than an abstract calorie count. Includes an interactive prototype.</p>
+        <p class="stack">Figma &middot; UI/UX &middot; Prototyping</p>
+        <a class="link" href="https://github.com/lmrkmrcs/nutralife-app-design" target="_blank" rel="noopener">View case study &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">
+        <img src="assets/projects/09_knight.jpg" alt="Knight Parkour title screen" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-design">Game Development</span>
+        <h3>Knight Parkour</h3>
+        <p>A 2D pixel-art platformer in Unity with four levels, a health system, and five hazards that each run as an independent state machine, tuned entirely from the inspector so the same prefab plays differently in level one and level four.</p>
+        <p class="stack">Unity 6 &middot; C# &middot; 2D Physics</p>
+        <a class="link" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="v-internship" class="wrap section" hidden>
+  <a class="back" href="#projects">&larr; Back to Projects</a>
+  <h2>Internship Projects</h2>
+  <p class="lede">Four systems built during my software developer internship at a palm oil mill in Sabah, March to August 2026. Every one had to run on office PCs with no admin rights.</p>
+  <div class="grid">
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/ffb-supplier-management-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/04_ffb.jpg" alt="FFB supplier management table" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>FFB Supplier Management</h3>
+        <p>Hundreds of palm oil suppliers across four collecting centres, each centre keeping a differently-shaped Excel file. Reads legacy spreadsheets <em>positionally</em> so broken headers still load, merges certification data by normalised name, and tracks MPOB licence expiry. Asked to build four systems; proposed one instead.</p>
+        <p class="stack">Python &middot; PyQt6 &middot; pandas</p>
+        <a class="link" href="https://github.com/lmrkmrcs/ffb-supplier-management-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/ffb-budget-management-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/05_budget.jpg" alt="Budget management web interface" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>Budget Management System</h3>
+        <p>Office PCs had no admin rights, so nothing could be installed. Built the server against Python&rsquo;s standard library alone, with no framework and no database, then packaged it as a click-to-run executable. Any phone on the same WiFi reaches it by scanning a QR code. Fully bilingual EN/MS.</p>
+        <p class="stack">Python (stdlib) &middot; Tkinter &middot; React</p>
+        <a class="link" href="https://github.com/lmrkmrcs/ffb-budget-management-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/hr-employee-records-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/06_hr.jpg" alt="HR employee records system" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>HR Employee Records</h3>
+        <p>Employee records and workplace accident reporting. Maps spreadsheet columns by keyword so HR never had to reformat their files, and routes impossible values to <code>Unknown</code> rather than silently corrupting demographic reports. Styled Excel and PDF export.</p>
+        <p class="stack">Python &middot; CustomTkinter &middot; pandas &middot; ReportLab</p>
+        <a class="link" href="https://github.com/lmrkmrcs/hr-employee-records-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/office-asset-tracker-demo" target="_blank" rel="noopener">
+        <img src="assets/projects/07_asset.jpg" alt="Office asset register" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-work">Internship</span>
+        <h3>Office Asset Tracker</h3>
+        <p>An asset register for old, locked-down Windows machines. SQLite sits in a single file beside the executable, lifecycle status means broken items are marked rather than deleted, and printable QR + barcode labels tie each database row back to the physical object.</p>
+        <p class="stack">Python &middot; Tkinter &middot; SQLite</p>
+        <a class="link" href="https://github.com/lmrkmrcs/office-asset-tracker-demo" target="_blank" rel="noopener">Read case study &rarr;</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="v-leave-record" class="wrap section" hidden>
+  <a class="back" href="#excel">&larr; Back to Excel &amp; Data Work</a>
+  <span class="tag ">Excel &middot; HR</span>
+  <h2>Employee Leave Record 2026</h2>
+  <p class="lede">A leave tracker for around 180 employees, built from scratch for HR and designed so whoever inherits it can keep it running without me.</p>
+  <figure class="detail-shot">
+    <img src="assets/projects/10_leave.png" alt="Employee leave record spreadsheet with colour-coded manual and calculated columns">
+    <figcaption>Rebuilt for this portfolio with invented names and figures. The real workbook is not published.</figcaption>
+  </figure>
+  <div class="detail-body">
+    <ul>
+      <li>Yellow cells are typed by hand, grey cells calculate themselves. The colour coding carries the instructions: if it is grey, do not type in it.</li>
+      <li>Years of service derive from the join date, annual and sick leave balances update as days are entered, and hospitalisation is held to its 60-day ceiling.</li>
+      <li>A dashboard sheet counts anyone over their entitlement and flags rows still missing a join date, so mistakes surface instead of sitting unnoticed in a file of 180 rows.</li>
+      <li>Designations live on their own sheet and feed a drop-down, so HR can add a job title without touching a formula, and an instructions sheet up front explains the rest.</li>
+    </ul>
+    <p class="stack">Excel &middot; Formulas &middot; Data validation &middot; Dashboard</p>
+  </div>
+</section>
+
+<section id="v-budget-workbook" class="wrap section" hidden>
+  <a class="back" href="#excel">&larr; Back to Excel &amp; Data Work</a>
+  <span class="tag tag-work">Excel &middot; Internship</span>
+  <h2>FFB Collecting Budget Workbook</h2>
+  <p class="lede">The budget template I inherited had drifted out of shape, so I rebuilt it into a single sheet that reconciles, then made the software read from it.</p>
+  <figure class="detail-shot">
+    <img src="assets/projects/11_budgetxls.png" alt="Rebuilt FFB collecting budget sheet with forecast and actual columns">
+    <figcaption>Rebuilt for this portfolio with invented names and figures. The real workbook is not published.</figcaption>
+  </figure>
+  <div class="detail-body">
+    <ul>
+      <li>Three defects in the original: one sheet was titled for one collecting centre but held another centre&rsquo;s figures, a second repeated a third centre&rsquo;s numbers, and the per-tonne columns referenced the wrong cells, reporting a few sen per tonne where the real cost ran to tens of ringgit.</li>
+      <li>Rebuilt as one sheet covering three collecting centres, fifteen cost categories with the transport breakdown nested under its parent line, and five financial years carrying both forecast and actual columns.</li>
+      <li>The grand total counts numbered lines only, so a sub-item is never double counted against the parent it belongs to.</li>
+      <li>It became the data source the budget application imports, and the import script re-checks every site and year against the sheet&rsquo;s own totals and refuses to run if they disagree.</li>
+    </ul>
+    <p class="stack">Excel &middot; openpyxl &middot; Data cleaning</p>
+  </div>
+</section>
+</div>
+
 <footer>
   <div class="wrap">
     <p>&copy; 2026 Leomark Marcus &middot; Kota Kinabalu, Sabah</p>
   </div>
 </footer>
 
+
+<script>
+/* Hash router. "#/name" opens a sub-view and hides the home page;
+   anything else (or nothing) shows home and scrolls to that anchor. */
+(function () {
+  var VIEWS = ['uni', 'internship', 'leave-record', 'budget-workbook'];
+
+  function render() {
+    var hash = location.hash || '';
+    var key  = hash.slice(0, 2) === '#/' ? hash.slice(2) : null;
+    var open = VIEWS.indexOf(key) > -1 ? key : null;
+
+    VIEWS.forEach(function (id) {
+      var el = document.getElementById('v-' + id);
+      if (el) el.hidden = (id !== open);
+    });
+    document.body.classList.toggle('is-view', !!open);
+
+    if (open) {
+      window.scrollTo(0, 0);
+    } else if (hash.length > 1) {
+      var target = document.getElementById(hash.slice(1));
+      if (target) target.scrollIntoView();
+    }
+  }
+
+  window.addEventListener('hashchange', render);
+  render();
+})();
+</script>
 </body>
 </html>

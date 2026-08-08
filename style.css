@@ -230,24 +230,44 @@ footer p{margin:0}
   .nav nav a:nth-child(5){display:none}
 }
 
-/* ---------- excel & data work ---------- */
-/* same card as .role-item. No screenshots in this section on purpose: the
-   underlying workbooks hold real company figures and employee records. */
-.datawork{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem}
-.data-item{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:1.15rem 1.25rem;box-shadow:var(--shadow);
+/* ---------- category tiles + sub-views ---------- */
+/* Two-up grid for the category tiles and the Excel cards. auto-fit collapses
+   the empty third track so two cards fill the row instead of hugging the left. */
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+
+/* Sub-views swap in place of the home page, so a project category or a
+   workbook write-up reads as its own screen with a Back link. */
+#views{display:none}
+body.is-view #home{display:none}
+body.is-view #views{display:block}
+
+/* the sticky header would otherwise sit over the top of an anchored section */
+section[id]{scroll-margin-top:74px}
+
+.back{
+  display:block;width:max-content;margin-bottom:1.1rem;
+  font-size:.9rem;font-weight:600;color:var(--teal-dk);
 }
-.data-item h3{font-size:1rem;margin:0 0 .2rem;color:var(--navy)}
-.data-meta{
-  font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;
-  font-weight:700;color:var(--teal-dk);margin:0 0 .6rem;
+.back:hover{text-decoration:underline}
+/* the tag sits on its own line under the back link, not beside it */
+#views .tag{display:inline-block;margin-bottom:.7rem}
+
+.detail-shot{margin:0 0 1.6rem}
+.detail-shot img{
+  display:block;width:100%;height:auto;
+  border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);
 }
-.data-item p{font-size:.92rem;color:var(--ink);margin:0 0 .8rem}
-.data-item ul{list-style:none;margin:0 0 .9rem;padding:0;display:grid;gap:.45rem}
-.data-item li{font-size:.92rem;color:var(--muted);line-height:1.5;padding-left:1rem;position:relative}
-.data-item li::before{
-  content:"";position:absolute;left:0;top:.62em;
+.detail-shot figcaption{
+  margin-top:.55rem;font-size:.8rem;color:var(--t3,#9e9588);
+}
+.detail-body{max-width:70ch}
+.detail-body ul{list-style:none;margin:0 0 1.1rem;padding:0;display:grid;gap:.65rem}
+.detail-body li{
+  position:relative;padding-left:1.1rem;
+  color:var(--muted);font-size:.95rem;line-height:1.6;
+}
+.detail-body li::before{
+  content:"";position:absolute;left:0;top:.65em;
   width:5px;height:5px;border-radius:50%;background:var(--teal);
 }
-.data-item .stack{margin:0 !important;padding-top:.2rem}
+.detail-body .stack{margin:0 !important}
