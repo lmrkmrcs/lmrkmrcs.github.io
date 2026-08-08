@@ -127,14 +127,14 @@ h2::after{
 .card h3{font-size:1.12rem;margin:.45rem 0 .5rem}
 .card p{color:var(--muted);font-size:.93rem;margin:0 0 .8rem}
 .tag{
-  align-self:flex-start;          /* stop the flex column stretching it full width */
+  align-self:flex-start;
   font-size:.68rem;font-weight:700;letter-spacing:.09em;
   text-transform:uppercase;padding:.22rem .68rem;border-radius:20px;
   background:#e8f5f5;color:var(--teal-dk);
 }
-.tag-hl{background:var(--navy);color:#7fe3e0}
-.tag-work{background:#eef2f9;color:var(--navy)}
-.tag-design{background:#fdf0e8;color:#b4623a}
+/* one tag treatment everywhere — the label text already says the category,
+   so it doesn't need four different colour schemes */
+.tag-hl,.tag-work,.tag-design{background:#e8f5f5;color:var(--teal-dk)}
 .stack{
   font-size:.8rem !important;color:var(--navy) !important;
   font-weight:600;margin-top:auto !important;padding-top:.3rem;
@@ -150,11 +150,25 @@ h2::after{
 .skillset li::before{content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;border-radius:50%;background:var(--teal)}
 
 /* ---------- certifications ---------- */
-.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}
-.certgroup{border-left:3px solid var(--teal);padding-left:1.1rem}
-.certgroup h3{font-size:.98rem;margin-bottom:.55rem}
-.certgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:.42rem}
-.certgroup li{font-size:.9rem;color:var(--muted);line-height:1.45}
+/* same card treatment as .skillset — one visual language across the page */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.4rem}
+.certgroup{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.15rem 1.25rem;box-shadow:var(--shadow);
+}
+.certgroup h3{
+  font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;
+  color:var(--teal-dk);margin-bottom:.7rem;
+}
+.certgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+.certgroup li{
+  font-size:.92rem;color:var(--ink);line-height:1.45;
+  padding-left:1rem;position:relative;
+}
+.certgroup li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:5px;height:5px;border-radius:50%;background:var(--teal);
+}
 
 /* ---------- contact ---------- */
 .contact{
@@ -193,18 +207,18 @@ footer p{margin:0}
 }
 
 /* ---------- leadership & activities ---------- */
-.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.5rem}
+/* same card as .skillset; role titles stay navy since they are names, not categories */
+.roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.4rem}
 .role-item{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
   padding:1.15rem 1.25rem;box-shadow:var(--shadow);
-  border-top:3px solid var(--teal);
 }
-.role-item h3{font-size:1.02rem;margin:0 0 .25rem}
+.role-item h3{font-size:1rem;margin:0 0 .2rem;color:var(--navy)}
 .role-meta{
-  font-size:.78rem;font-weight:600;letter-spacing:.03em;
-  color:var(--teal-dk);margin:0 0 .6rem;
+  font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;
+  font-weight:700;color:var(--teal-dk);margin:0 0 .6rem;
 }
-.role-item p:last-child{font-size:.92rem;color:var(--muted);margin:0}
+.role-item p:last-child{font-size:.92rem;color:var(--ink);margin:0}
 
 @media (max-width:620px){
   /* nav: keep Projects + Contact only */
