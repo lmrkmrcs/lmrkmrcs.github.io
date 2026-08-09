@@ -387,19 +387,52 @@
   <a class="back" href="#/internship">&larr; Back to Internship Projects</a>
   <span class="tag tag-work">Excel &middot; Internship</span>
   <h2>Employee Leave Record 2026</h2>
-  <p class="lede">A leave tracker for around 180 employees, built from scratch for HR and designed so whoever inherits it can keep it running without me.</p>
+  <p class="lede">A leave tracker for the whole company, built from scratch. Four sheets, 182 employee rows, and a deliberate effort to make it survive without me.</p>
+
   <figure class="detail-shot">
-    <img src="assets/projects/10_leave.png" alt="Employee leave record spreadsheet with colour-coded manual and calculated columns">
+    <img src="assets/projects/10_leave.png" alt="Leave record grid with yellow manual-entry columns and grey calculated columns">
     <figcaption>Rebuilt for this portfolio with invented names and figures. The real workbook is not published.</figcaption>
   </figure>
+
   <div class="detail-body">
+    <h3>The design rule: colour tells you what to touch</h3>
+    <p>HR had to be able to use this without training. So the sheet carries its own instructions visually. Yellow cells are the ones you type in. Grey cells calculate themselves and should be left alone. Red means a value has gone past a limit and needs looking at. The first four columns stay frozen on screen, so a name never scrolls out of view while you are working across twenty columns.</p>
+
+    <h3>What calculates itself</h3>
+    <p>Ten of the twenty columns are derived, so the typing stays as small as possible:</p>
     <ul>
-      <li>Yellow cells are typed by hand, grey cells calculate themselves. The colour coding carries the instructions: if it is grey, do not type in it.</li>
-      <li>Years of service derive from the join date, annual and sick leave balances update as days are entered, and hospitalisation is held to its 60-day ceiling.</li>
-      <li>A dashboard sheet counts anyone over their entitlement and flags rows still missing a join date, so mistakes surface instead of sitting unnoticed in a file of 180 rows.</li>
-      <li>Designations live on their own sheet and feed a drop-down, so HR can add a job title without touching a formula, and an instructions sheet up front explains the rest.</li>
+      <li>Years of service comes from the join date, measured against a single as-at date held on the dashboard. Change that one cell and all 182 rows re-date themselves.</li>
+      <li>Annual and sick leave balances are entitlement minus days taken, and both turn red the moment they go negative.</li>
+      <li>Total days taken sums annual, sick, hospitalisation, absent and unpaid in one figure.</li>
+      <li>Every calculated column is wrapped so that an empty row stays blank rather than filling the sheet with zeros and false warnings.</li>
     </ul>
-    <p class="stack">Excel &middot; Formulas &middot; Data validation &middot; Dashboard</p>
+
+    <h3>Built around the Employment Act</h3>
+    <p>Hospitalisation leave in Malaysia is capped at 60 days a year, and under section 60F of the Employment Act 1955 that cap includes ordinary sick leave rather than sitting on top of it. The balance column reflects that, counting down from 60 after both figures, which is the part that is easy to get wrong.</p>
+    <p>The instructions sheet also carries the statutory minimum entitlements by length of service as a reference table. I deliberately did not wire it into the formulas. Entitlements at the company can exceed the legal minimum, so the sheet informs the decision and leaves it with HR rather than silently overriding them.</p>
+  </div>
+
+  <figure class="detail-shot narrow">
+    <img src="assets/projects/13_leavedash.png" alt="Dashboard sheet showing summary totals and exception counters for over-entitlement and missing dates">
+    <figcaption>Rebuilt for this portfolio with invented names and figures. The real workbook is not published.</figcaption>
+  </figure>
+
+  <div class="detail-body">
+    <h3>A dashboard that looks for mistakes</h3>
+    <p>Summary totals are the easy part. The more useful half is the exception block underneath: how many employees are over their annual leave entitlement, over sick leave, past the hospitalisation cap, and how many rows are still missing a join date.</p>
+    <p>Those four counters exist because a spreadsheet of 182 rows hides its own errors well. A single negative balance somewhere in the middle is invisible when scrolling, but it is obvious as a number on the front sheet.</p>
+  </div>
+
+  <figure class="detail-shot narrow">
+    <img src="assets/projects/14_designations.png" alt="Designations sheet feeding the job title drop-down, with a note explaining how to extend it">
+    <figcaption>Rebuilt for this portfolio with invented names and figures. The real workbook is not published.</figcaption>
+  </figure>
+
+  <div class="detail-body">
+    <h3>Designed to be handed over</h3>
+    <p>The job title drop-down reads from a list of 65 designations on its own sheet, through a named range built with <code>OFFSET</code> and <code>COUNTA</code>. That detail matters more than it sounds: the range measures itself, so when HR types a new job title on the next empty row it appears in the drop-down immediately. Nobody has to edit a formula or widen a range, which is exactly the kind of maintenance a departing intern should not be leaving behind.</p>
+    <p>The workbook opens on an instructions sheet covering what to fill in, what not to touch, what the colours mean, where the data came from, and the legal reference behind the leave caps. The aim was that the file explains itself to whoever opens it next.</p>
+    <p class="stack">Excel &middot; DATEDIF &middot; Data validation &middot; Named ranges &middot; Conditional formatting</p>
   </div>
 </section>
 
@@ -407,19 +440,50 @@
   <a class="back" href="#/internship">&larr; Back to Internship Projects</a>
   <span class="tag tag-work">Excel &middot; Internship</span>
   <h2>FFB Collecting Budget Workbook</h2>
-  <p class="lede">The budget template I inherited had drifted out of shape, so I rebuilt it into a single sheet that reconciles, then made the software read from it.</p>
+  <p class="lede">The budget template I inherited had drifted out of shape and was painful to key into. I rebuilt the summary sheet, added a proper entry sheet behind it, and then made the budget software read from the result.</p>
+
+  <div class="detail-body">
+    <h3>What was wrong with it</h3>
+    <p>The workbook had been copied and edited by several people over a couple of years, and it had come apart in three separate ways. One sheet was titled for one collecting centre but held another centre&rsquo;s figures. A second simply repeated a third centre&rsquo;s numbers. And the per-tonne columns pointed at the wrong cells, so a cost that really ran to tens of ringgit per tonne was displaying as a few sen.</p>
+    <p>None of that showed up as an error. Excel reported no problem, every cell had a number in it, and the totals at the bottom looked plausible. That is the part worth noticing: the sheet was confidently wrong.</p>
+
+    <h3>The harder problem: it was hostile to type into</h3>
+    <p>The bigger issue was not the broken formulas, it was the shape. Staff had to key a single finished total into each cell of a rigid grid. But office costs do not arrive as one total, they arrive as dozens of small receipts across a year. There was nowhere to record them individually, so somebody was adding them up on a calculator and typing the result in, which leaves no trace of what went into the number and no way to check it later.</p>
+  </div>
+
   <figure class="detail-shot">
-    <img src="assets/projects/11_budgetxls.png" alt="Rebuilt FFB collecting budget sheet with forecast and actual columns">
+    <img src="assets/projects/12_sheet6.png" alt="Cost entry sheet with one row per transaction, a monthly tonnage block, and a legend documenting the rebuild assumptions">
     <figcaption>Rebuilt for this portfolio with invented names and figures. The real workbook is not published.</figcaption>
   </figure>
+
   <div class="detail-body">
+    <h3>Sheet 6: one row per entry</h3>
+    <p>So I added an entry sheet. Every cost gets its own row, tagged with the centre, the financial year, an item number matching the summary line it belongs to, and a sub number for the transport breakdown. Twelve separate office receipts are now twelve rows instead of one hand-totalled figure. It currently holds around 1,560 cost rows and 108 monthly tonnage readings, three centres across three years.</p>
+    <p>Tonnage moved to monthly entry for the same reason. Staff record what came in each month and the annual figure adds itself up, rather than someone maintaining a yearly total by hand.</p>
+
+  </div>
+
+  <figure class="detail-shot">
+    <img src="assets/projects/11_budgetxls.png" alt="Rebuilt summary sheet with forecast and actual columns per financial year">
+    <figcaption>Rebuilt for this portfolio with invented names and figures. The real workbook is not published.</figcaption>
+  </figure>
+
+  <div class="detail-body">
+    <h3>Sheet 5 now reads itself</h3>
+    <p>Every figure on the summary sheet became a formula. Each line is a <code>SUMIFS</code> matched on centre, financial year and item number, so nothing on that sheet is typed any more. Three things fall out of that:</p>
     <ul>
-      <li>Three defects in the original: one sheet was titled for one collecting centre but held another centre&rsquo;s figures, a second repeated a third centre&rsquo;s numbers, and the per-tonne columns referenced the wrong cells, reporting a few sen per tonne where the real cost ran to tens of ringgit.</li>
-      <li>Rebuilt as one sheet covering three collecting centres, fifteen cost categories with the transport breakdown nested under its parent line, and five financial years carrying both forecast and actual columns.</li>
-      <li>The grand total counts numbered lines only, so a sub-item is never double counted against the parent it belongs to.</li>
-      <li>It became the data source the budget application imports, and the import script re-checks every site and year against the sheet&rsquo;s own totals and refuses to run if they disagree.</li>
+      <li>The per-tonne columns are recalculated as <code>IFERROR(cost / tonnage, 0)</code>, which fixes the original bug and stops a divide-by-zero appearing in an empty year.</li>
+      <li>The grand total is <code>SUM</code> of the numbered lines only, deliberately skipping the six transport sub-item rows, so a sub-item is never counted twice against the parent it belongs to.</li>
+      <li>Adding a receipt on Sheet 6 updates the summary, the per-tonne column and the grand total at once. There is no second place to remember to update.</li>
     </ul>
-    <p class="stack">Excel &middot; openpyxl &middot; Data cleaning</p>
+
+    <h3>Writing down the judgement calls</h3>
+    <p>Rebuilding somebody else&rsquo;s workbook means making decisions about ambiguous data, and those decisions change the numbers. Rather than make them silently I kept a notes column on the entry sheet listing each one: which financial year an oddly-placed block of transport costs actually belongs to, whether sub-items add to the parent or break it down, and the assumption that monthly tonnage runs July to June.</p>
+    <p>One of those assumptions moves a few thousand ringgit of driver wages from one financial year into another. Anyone who disagrees with that call can find it written down instead of discovering it as a discrepancy. The original sheet is also kept in the file, untouched, so the two can be compared.</p>
+
+    <h3>It became the source of truth</h3>
+    <p>Once the sheet reconciled, the budget application was pointed at it. The import script recomputes every centre and year total and refuses to run if its own arithmetic disagrees with the sheet&rsquo;s grand total rows, so the spreadsheet and the software cannot quietly drift apart again.</p>
+    <p class="stack">Excel &middot; SUMIFS &middot; Named ranges &middot; openpyxl &middot; Data cleaning</p>
   </div>
 </section>
 </div>
