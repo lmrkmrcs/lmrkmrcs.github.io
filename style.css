@@ -98,10 +98,6 @@ h2::after{
 .btn.primary{background:var(--teal);border-color:var(--teal);color:#04231f}
 .btn.primary:hover{background:#35bdba;border-color:#35bdba}
 .contact .btn.ghost{border-color:rgba(255,255,255,.35)}
-/* .btn is styled for the dark hero, so it is invisible on white.
-   .outline is the secondary button for light backgrounds. */
-.btn.outline{background:#fff;border-color:var(--line);color:var(--teal-dk)}
-.btn.outline:hover{background:#f2fafa;border-color:var(--teal)}
 
 /* ---------- about ---------- */
 .band{background:var(--bg-alt);border-block:1px solid var(--line)}
@@ -147,7 +143,12 @@ h2::after{
 
 /* ---------- skills ---------- */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.4rem}
-.skillset{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.15rem 1.25rem;box-shadow:var(--shadow)}
+.skillset{
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+  padding:1.15rem 1.25rem;box-shadow:var(--shadow);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.skillset:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--teal)}
 .skillset h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-dk);margin-bottom:.7rem}
 .skillset ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
 .skillset li{font-size:.92rem;color:var(--ink);padding-left:1rem;position:relative}
@@ -169,6 +170,11 @@ h2::after{
   padding:.08rem .48rem;border-radius:20px;
 }
 .glist{border-top:1px solid var(--line)}
+/* issuer line inside a certificate view, same weight as other meta text */
+.cert-issuer{
+  font-size:.82rem;text-transform:uppercase;letter-spacing:.06em;
+  font-weight:700;color:var(--teal-dk);margin:0 0 1.4rem !important;
+}
 .crow{
   display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
   padding:.9rem .4rem;border-bottom:1px solid var(--line);
@@ -195,26 +201,6 @@ h2::after{
   .crow-meta{gap:.5rem}
 }
 
-/* ---------- certificate detail page ---------- */
-.cert-page{max-width:820px}
-.cert-page h1{font-size:1.6rem;line-height:1.3;margin:.5rem 0 .35rem}
-.cert-meta{color:var(--muted);font-size:.9rem;margin:0 0 1.4rem}
-.cert-lede{font-size:1.05rem;font-weight:600;color:var(--ink);margin:0 0 1.1rem}
-.cert-page p{color:var(--muted)}
-.cert-skills{display:flex;flex-wrap:wrap;gap:.45rem;margin:1.4rem 0}
-.cert-skills span{
-  font-size:.78rem;font-weight:600;padding:.25rem .7rem;border-radius:20px;
-  background:#e8f5f5;color:var(--teal-dk);
-}
-.cert-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:1.5rem 0}
-.cert-embed{
-  margin-top:1.6rem;border:1px solid var(--line);border-radius:var(--radius);
-  overflow:hidden;background:var(--bg-alt);
-}
-.cert-embed object{width:100%;height:min(78vh,760px);display:block;border:0}
-.cert-embed p{padding:1.4rem;margin:0;text-align:center}
-.foot{border-top:1px solid var(--line);padding:1.6rem 0;margin-top:3rem}
-.foot p{color:var(--muted);font-size:.88rem;margin:0}
 
 /* ---------- contact ---------- */
 .contact{
@@ -259,7 +245,9 @@ footer p{margin:0}
 .role-item{
   background:#fff;border:1px solid var(--line);border-radius:var(--radius);
   padding:1.15rem 1.25rem;box-shadow:var(--shadow);
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
 }
+.role-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--teal)}
 .role-item h3{font-size:1rem;margin:0 0 .2rem;color:var(--navy)}
 .role-meta{
   font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;
