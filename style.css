@@ -227,8 +227,12 @@ h2::after{
 .crow:hover .crow-arrow,
 .crow:focus-visible .crow-arrow{opacity:1;transform:translateX(0)}
 @media (max-width:560px){
-  .crow{flex-direction:column;align-items:flex-start;gap:.3rem}
-  .crow-meta{gap:.5rem}
+  /* keep the date on the right and let the title wrap under it, rather than
+     stacking, which added a whole line of height to every row */
+  .crow{align-items:flex-start;gap:.8rem}
+  .crow-date{font-size:.76rem;padding-top:.1rem}
+  .crow-arrow{display:none}
+  .ghead{margin-top:1.7rem}
 }
 
 
@@ -264,6 +268,17 @@ footer p{margin:0}
   /* .grid-2 is declared later in the file, so it needs its own override */
   .grid-2{grid-template-columns:1fr}
   .btn{padding:.55rem .95rem;font-size:.87rem}
+
+  /* A card that runs past a full screen stops being a card. Trim the
+     preview text and the image; the full copy lives in the detail view. */
+  .shot img{height:150px}
+  .card-body{padding:1rem 1.1rem 1.2rem}
+  .card p:not(.stack){
+    display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;
+    overflow:hidden;margin-bottom:.7rem;
+  }
+  .card h3{font-size:1.05rem;margin:.4rem 0 .4rem}
+  .grid{gap:1.1rem}
 }
 
 @media (prefers-reduced-motion:reduce){
