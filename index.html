@@ -82,7 +82,7 @@
 <!-- ===== PROJECTS ===== -->
 <section id="projects" class="wrap section">
   <h2>Projects</h2>
-  <p class="lede">Sixteen things I&rsquo;ve built, grouped by where they came from. Pick a category to open it.</p>
+  <p class="lede">Eighteen things I&rsquo;ve built, grouped by where they came from. Pick a category to open it.</p>
 
   <div class="grid grid-2">
 
@@ -93,9 +93,9 @@
       <div class="card-body">
         <span class="tag">University</span>
         <h3>University Projects</h3>
-        <p>Nine projects from the degree: a final year thesis on thermal object detection, a medical imaging CNN built twice in two frameworks, a 3D medical volume visualiser, two relational databases, a least squares against minimax income study, an AI agent that reasons in code, a 31-screen app design, and a Unity platformer.</p>
-        <p class="stack">Deep learning &middot; Scientific visualisation &middot; SQL &middot; Data analysis &middot; UI/UX</p>
-        <a class="link" href="#/uni">View 9 projects &rarr;</a>
+        <p>Eleven projects from the degree: a final year thesis on thermal object detection, a medical imaging CNN built twice in two frameworks, a 3D medical volume visualiser, two relational databases, a least squares against minimax income study, a 3D scene editor, an image editor, an AI agent that reasons in code, a 31-screen app design, and a Unity platformer.</p>
+        <p class="stack">Deep learning &middot; Computer graphics &middot; Image processing &middot; SQL &middot; Data analysis</p>
+        <a class="link" href="#/uni">View 11 projects &rarr;</a>
       </div>
     </article>
 
@@ -235,7 +235,7 @@
 <section id="v-uni" class="wrap section" hidden>
   <a class="back" href="#projects">&larr; Back to Projects</a>
   <h2>University Projects</h2>
-  <p class="lede">Nine projects from my degree, covering deep learning, scientific visualisation, relational databases, data analysis, interface design and games.</p>
+  <p class="lede">Eleven projects from my degree, covering deep learning, scientific visualisation, computer graphics, image processing, relational databases, data analysis, interface design and games.</p>
   <div class="grid">
     <article class="card">
       <a class="shot" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">
@@ -343,6 +343,30 @@
         <p>Fifty-two years of Malaysian income data from DOSM, fitted twice by two different definitions of <em>best fit</em>. Least squares optimises the average error, minimax the single worst one. Each wins the metric it optimises, and minimax cuts worst-case error by <strong>19.9%</strong> for about 4% worse RMSE.</p>
         <p class="stack">Python &middot; NumPy &middot; SciPy &middot; pandas</p>
         <a class="link" href="https://github.com/lmrkmrcs/household-income-modelling" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/vtk-3d-scene-editor" target="_blank" rel="noopener">
+        <img src="assets/projects/20_meshviewer.jpg" alt="3D scene editor with several parametric objects and a layer list" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Computer Graphics</span>
+        <h3>VTK 3D Scene Editor</h3>
+        <p>A 3D editor with a parametric geometry library, layers, transforms and scene save/load. The awkward part is that the four supported mesh formats disagree on what a model even is: <code>.stl</code> is raw triangles with no topology, <code>.obj</code> has no guaranteed normals, and <code>.vtk</code> can hold three different dataset types. Each needs its own reader, normalised into one pipeline.</p>
+        <p class="stack">Python &middot; VTK &middot; PyQt5</p>
+        <a class="link" href="https://github.com/lmrkmrcs/vtk-3d-scene-editor" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/dip-image-editor" target="_blank" rel="noopener">
+        <img src="assets/projects/21_dipeditor.jpg" alt="Image editor showing an HSV colour space conversion on the canvas" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Image Processing</span>
+        <h3>GraphicXPaint Image Editor</h3>
+        <p>An image editor over a <code>QGraphicsScene</code> canvas with OpenCV underneath, converting between <strong>six colour spaces</strong> including HSV, CIE Lab and YCrCb. The hard part was direct manipulation: drag, corner-handle resize, rotation and rubber-band crop all sharing one selection and one undo stack, with items kept inside the canvas bounds.</p>
+        <p class="stack">Python &middot; OpenCV &middot; PyQt5 &middot; NumPy</p>
+        <a class="link" href="https://github.com/lmrkmrcs/dip-image-editor" target="_blank" rel="noopener">View repository &rarr;</a>
       </div>
     </article>
   </div>
