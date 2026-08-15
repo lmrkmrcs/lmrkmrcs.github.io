@@ -261,6 +261,8 @@ footer p{margin:0}
   .nav nav a:nth-child(3),
   .nav nav a:nth-child(4){display:none}
   .grid{grid-template-columns:1fr}
+  /* .grid-2 is declared later in the file, so it needs its own override */
+  .grid-2{grid-template-columns:1fr}
   .btn{padding:.55rem .95rem;font-size:.87rem}
 }
 
@@ -401,6 +403,8 @@ section[id]{scroll-margin-top:74px}
 /* Small phones: nothing should ever scroll sideways */
 @media (max-width:400px){
   .wrap{width:min(1120px,94vw)}
+  /* .roles/.grid-2 minimums exceed a 320px screen, so collapse them */
+  .roles,.grid-2{grid-template-columns:1fr}
   .section{padding:44px 0}
   h2{font-size:1.45rem}
   .tag{font-size:.63rem}
