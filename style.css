@@ -160,7 +160,7 @@ h2::after{
   font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;
   color:var(--teal-dk);margin-bottom:.7rem;
 }
-.certgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
+.certgroup ul{list-style:none;margin:0;padding:0;display:grid;gap:.85rem}
 .certgroup li{
   font-size:.92rem;color:var(--ink);line-height:1.45;
   padding-left:1rem;position:relative;
@@ -168,6 +168,22 @@ h2::after{
 .certgroup li::before{
   content:"";position:absolute;left:0;top:.62em;
   width:5px;height:5px;border-radius:50%;background:var(--teal);
+}
+.certgroup li a{
+  color:var(--ink);text-decoration:none;font-weight:600;
+  border-bottom:1px solid transparent;transition:color .15s,border-color .15s;
+}
+.certgroup li a::after{
+  content:"\2197";font-size:.78em;margin-left:.3em;
+  color:var(--teal-dk);opacity:.65;
+}
+.certgroup li a:hover,
+.certgroup li a:focus-visible{
+  color:var(--teal-dk);border-bottom-color:var(--teal);
+}
+.cert-note{
+  display:block;margin-top:.2rem;
+  font-size:.82rem;line-height:1.45;color:var(--muted,#5b6675);
 }
 
 /* ---------- contact ---------- */
