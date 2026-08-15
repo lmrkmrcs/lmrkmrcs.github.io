@@ -98,6 +98,10 @@ h2::after{
 .btn.primary{background:var(--teal);border-color:var(--teal);color:#04231f}
 .btn.primary:hover{background:#35bdba;border-color:#35bdba}
 .contact .btn.ghost{border-color:rgba(255,255,255,.35)}
+/* .btn is styled for the dark hero, so it is invisible on white.
+   .outline is the secondary button for light backgrounds. */
+.btn.outline{background:#fff;border-color:var(--line);color:var(--teal-dk)}
+.btn.outline:hover{background:#f2fafa;border-color:var(--teal)}
 
 /* ---------- about ---------- */
 .band{background:var(--bg-alt);border-block:1px solid var(--line)}
@@ -151,29 +155,45 @@ h2::after{
 
 /* ---------- certifications ---------- */
 /* same card treatment as .skillset — one visual language across the page */
-/* each certificate is its own card, same lift as the project cards */
-.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}
-.cert-card{
-  display:flex;flex-direction:column;
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:1.15rem 1.25rem 1.1rem;box-shadow:var(--shadow);
-  color:var(--ink);text-decoration:none;
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+/* Certificates are a list, not cards. A certificate is three facts, and the
+   pattern has to survive 30 of them without swamping the projects above. */
+.ghead{
+  display:flex;align-items:center;gap:.55rem;
+  font-size:.76rem;font-weight:700;text-transform:uppercase;letter-spacing:.11em;
+  color:var(--teal-dk);margin:2.1rem 0 .55rem;
 }
-.cert-card:hover,
-.cert-card:focus-visible{
-  transform:translateY(-4px);
-  box-shadow:var(--shadow-lg);
-  border-color:var(--teal);
+.ghead:first-of-type{margin-top:0}
+.gcount{
+  background:#e8f5f5;color:var(--teal-dk);
+  font-size:.7rem;font-weight:700;letter-spacing:0;
+  padding:.08rem .48rem;border-radius:20px;
 }
-.cert-card h3{
-  font-size:1rem;line-height:1.4;margin:.55rem 0 .35rem;color:var(--ink);
+.glist{border-top:1px solid var(--line)}
+.crow{
+  display:flex;align-items:center;justify-content:space-between;gap:1.2rem;
+  padding:.9rem .4rem;border-bottom:1px solid var(--line);
+  text-decoration:none;color:var(--ink);
+  transition:background .16s ease,padding .16s ease;
 }
-.cert-date{font-size:.8rem;color:var(--muted);margin-bottom:.9rem}
-.cert-open{
-  margin-top:auto;font-size:.86rem;font-weight:600;color:var(--teal-dk);
+.crow:hover,
+.crow:focus-visible{background:#f7fbfb;padding-left:.85rem;padding-right:.85rem}
+.crow-main{display:flex;flex-direction:column;min-width:0}
+.crow-title{font-weight:600;font-size:.96rem;line-height:1.38;transition:color .16s ease}
+.crow:hover .crow-title,
+.crow:focus-visible .crow-title{color:var(--teal-dk)}
+.crow-sub{font-size:.82rem;color:var(--muted);line-height:1.4}
+.crow-meta{display:flex;align-items:center;gap:.85rem;flex-shrink:0}
+.crow-date{font-size:.82rem;color:var(--muted);white-space:nowrap}
+.crow-arrow{
+  color:var(--teal-dk);opacity:0;transform:translateX(-4px);font-weight:600;
+  transition:opacity .16s ease,transform .16s ease;
 }
-.cert-card:hover .cert-open{text-decoration:underline}
+.crow:hover .crow-arrow,
+.crow:focus-visible .crow-arrow{opacity:1;transform:translateX(0)}
+@media (max-width:560px){
+  .crow{flex-direction:column;align-items:flex-start;gap:.3rem}
+  .crow-meta{gap:.5rem}
+}
 
 /* ---------- certificate detail page ---------- */
 .cert-page{max-width:820px}
