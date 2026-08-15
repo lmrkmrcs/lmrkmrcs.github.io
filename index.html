@@ -82,7 +82,7 @@
 <!-- ===== PROJECTS ===== -->
 <section id="projects" class="wrap section">
   <h2>Projects</h2>
-  <p class="lede">Twelve things I&rsquo;ve built, grouped by where they came from. Pick a category to open it.</p>
+  <p class="lede">Sixteen things I&rsquo;ve built, grouped by where they came from. Pick a category to open it.</p>
 
   <div class="grid grid-2">
 
@@ -93,9 +93,9 @@
       <div class="card-body">
         <span class="tag">University</span>
         <h3>University Projects</h3>
-        <p>Five projects from the degree: a final year thesis on thermal object detection, a medical imaging CNN built twice in two frameworks, an AI agent that reasons in code, a 31-screen app design, and a Unity platformer.</p>
-        <p class="stack">Deep learning &middot; AI agents &middot; UI/UX &middot; Game development</p>
-        <a class="link" href="#/uni">View 5 projects &rarr;</a>
+        <p>Nine projects from the degree: a final year thesis on thermal object detection, a medical imaging CNN built twice in two frameworks, a 3D medical volume visualiser, two relational databases, a least squares against minimax income study, an AI agent that reasons in code, a 31-screen app design, and a Unity platformer.</p>
+        <p class="stack">Deep learning &middot; Scientific visualisation &middot; SQL &middot; Data analysis &middot; UI/UX</p>
+        <a class="link" href="#/uni">View 9 projects &rarr;</a>
       </div>
     </article>
 
@@ -125,7 +125,7 @@
       </div>
       <div class="skillset">
         <h3>Data &amp; Analytics</h3>
-        <ul><li>pandas &middot; NumPy</li><li>SQL &middot; SQLite</li><li>Excel automation (openpyxl)</li><li>Power Query</li><li>Microsoft Power BI</li></ul>
+        <ul><li>pandas &middot; NumPy</li><li>SQL &middot; MySQL &middot; SQLite</li><li>Excel automation (openpyxl)</li><li>Power Query</li><li>Microsoft Power BI</li></ul>
       </div>
       <div class="skillset">
         <h3>Machine Learning</h3>
@@ -133,7 +133,7 @@
       </div>
       <div class="skillset">
         <h3>Also Worked With</h3>
-        <ul><li>C# &middot; Unity</li><li>React &middot; JavaScript</li><li>Google Apps Script</li><li>Gradio</li><li>AppSheet</li></ul>
+        <ul><li>VTK &middot; scientific visualisation</li><li>C# &middot; Unity</li><li>React &middot; JavaScript</li><li>Google Apps Script</li><li>Gradio</li><li>AppSheet</li></ul>
       </div>
       <div class="skillset">
         <h3>Design</h3>
@@ -235,7 +235,7 @@
 <section id="v-uni" class="wrap section" hidden>
   <a class="back" href="#projects">&larr; Back to Projects</a>
   <h2>University Projects</h2>
-  <p class="lede">Five projects from my degree, covering deep learning, AI agents, interface design and games.</p>
+  <p class="lede">Nine projects from my degree, covering deep learning, scientific visualisation, relational databases, data analysis, interface design and games.</p>
   <div class="grid">
     <article class="card">
       <a class="shot" href="https://github.com/lmrkmrcs/thermal-object-detection-yolov5" target="_blank" rel="noopener">
@@ -295,6 +295,54 @@
         <p>A 2D pixel-art platformer in Unity with four levels, a health system, and five hazards that each run as an independent state machine, tuned entirely from the inspector so the same prefab plays differently in level one and level four.</p>
         <p class="stack">Unity 6 &middot; C# &middot; 2D Physics</p>
         <a class="link" href="https://github.com/lmrkmrcs/knight-parkour-platformer" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/dicom-volume-visualizer" target="_blank" rel="noopener">
+        <img src="assets/projects/16_dicom.jpg" alt="3D volume rendering of a head CT scan with the bone preset applied" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Scientific Visualisation</span>
+        <h3>DICOM Medical Volume Visualiser</h3>
+        <p>Loads a folder of CT slices and renders them as one interactive 3D volume with GPU ray casting. A 142-slice head scan is <strong>37.2 million voxels</strong>, and every one has to map to a colour and an opacity before anything is visible, so the real work is the transfer function. Six tissue presets swap that mapping live, without reloading the data.</p>
+        <p class="stack">Python &middot; VTK &middot; PyQt5 &middot; DICOM</p>
+        <a class="link" href="https://github.com/lmrkmrcs/dicom-volume-visualizer" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/hospital-management-system" target="_blank" rel="noopener">
+        <img src="assets/projects/17_hospital.jpg" alt="Hospital management system doctors tab with entry form and records table" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Databases</span>
+        <h3>Hospital Management System</h3>
+        <p>A desktop front end over a normalised MySQL schema covering doctors, patients, appointments, medicine stock and prescriptions. Appointments and prescriptions are <strong>junction tables</strong> with real foreign keys and indexes, so the database refuses to hold a booking for a doctor who no longer exists.</p>
+        <p class="stack">MySQL &middot; Python &middot; PyQt5</p>
+        <a class="link" href="https://github.com/lmrkmrcs/hospital-management-system" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/library-management-database" target="_blank" rel="noopener">
+        <img src="assets/projects/18_library.jpg" alt="Entity relationship diagram for the library database" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Databases</span>
+        <h3>Library Management Database</h3>
+        <p>Five tables modelled in MySQL Workbench, where <code>loan</code> is the junction carrying three foreign keys plus the dates. Because the return date is nullable, one column answers <em>&ldquo;what is still out&rdquo;</em> with no status flag that could drift out of sync. Ships with an ER model and six demonstration join queries.</p>
+        <p class="stack">MySQL &middot; SQL &middot; ER modelling</p>
+        <a class="link" href="https://github.com/lmrkmrcs/library-management-database" target="_blank" rel="noopener">View repository &rarr;</a>
+      </div>
+    </article>
+    <article class="card">
+      <a class="shot" href="https://github.com/lmrkmrcs/household-income-modelling" target="_blank" rel="noopener">
+        <img src="assets/projects/19_income.jpg" alt="Least squares and minimax fits against Malaysian household income data with residual plot" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag">Data Analysis</span>
+        <h3>Household Income Modelling</h3>
+        <p>Fifty-two years of Malaysian income data from DOSM, fitted twice by two different definitions of <em>best fit</em>. Least squares optimises the average error, minimax the single worst one. Each wins the metric it optimises, and minimax cuts worst-case error by <strong>19.9%</strong> for about 4% worse RMSE.</p>
+        <p class="stack">Python &middot; NumPy &middot; SciPy &middot; pandas</p>
+        <a class="link" href="https://github.com/lmrkmrcs/household-income-modelling" target="_blank" rel="noopener">View repository &rarr;</a>
       </div>
     </article>
   </div>
