@@ -14,6 +14,24 @@
   --radius:12px;
   --shadow:0 1px 3px rgba(16,32,64,.07), 0 8px 24px rgba(16,32,64,.06);
   --shadow-lg:0 4px 12px rgba(16,32,64,.10), 0 18px 40px rgba(16,32,64,.10);
+
+  /* frosted surfaces: translucent fill, blurred backdrop, light top edge.
+     Same navy/teal palette, only the material changes. */
+  --glass:rgba(255,255,255,.62);
+  --glass-hover:rgba(255,255,255,.78);
+  --glass-line:rgba(255,255,255,.75);
+  --glass-edge:rgba(27,42,74,.09);
+  --blur:blur(16px) saturate(1.4);
+}
+
+/* Ambient wash. Glass needs something behind it to refract, otherwise the
+   blur is invisible on flat white. Two very soft teal/navy pools, fixed. */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:
+    radial-gradient(38rem 30rem at 12% 8%, rgba(44,166,164,.10), transparent 60%),
+    radial-gradient(34rem 28rem at 88% 42%, rgba(27,42,74,.08), transparent 62%),
+    radial-gradient(30rem 26rem at 45% 92%, rgba(44,166,164,.07), transparent 60%);
 }
 
 *{box-sizing:border-box}
@@ -27,8 +45,8 @@ body{
   -webkit-font-smoothing:antialiased;
 }
 img{max-width:100%;display:block}
-a{color:var(--teal-dk);text-decoration:none}
-a:hover{text-decoration:underline}
+a{color:var(--teal-dk);text-decoration:none;transition:color .16s ease,opacity .16s ease}
+a:hover{color:var(--teal)}
 code{
   font-family:ui-monospace,Consolas,monospace;
   font-size:.9em;background:#eef2f7;padding:.1em .4em;border-radius:4px;
@@ -48,9 +66,9 @@ h2::after{
 /* ---------- nav ---------- */
 .nav{
   position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.88);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
+  background:rgba(255,255,255,.72);
+  backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+  border-bottom:1px solid var(--glass-edge);
 }
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px}
 .brand{
@@ -100,7 +118,7 @@ h2::after{
 .contact .btn.ghost{border-color:rgba(255,255,255,.35)}
 
 /* ---------- about ---------- */
-.band{background:var(--bg-alt);border-block:1px solid var(--line)}
+.band{background:rgba(246,248,251,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);border-block:1px solid var(--glass-edge)}
 .about-grid{
   display:grid;grid-template-columns:1.35fr 1fr;gap:3rem;
   padding:70px 0;align-items:start;
@@ -114,12 +132,18 @@ h2::after{
 /* ---------- project cards ---------- */
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:1.6rem}
 .card{
-  border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;
-  background:#fff;box-shadow:var(--shadow);
+  border:1px solid var(--glass-edge);border-radius:var(--radius);overflow:hidden;
+  background:var(--glass);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+  box-shadow:var(--shadow),inset 0 1px 0 var(--glass-line);
   display:flex;flex-direction:column;
-  transition:transform .18s ease,box-shadow .18s ease;
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;
 }
-.card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.card:hover{
+  transform:translateY(-4px);
+  background:var(--glass-hover);
+  border-color:rgba(44,166,164,.35);
+  box-shadow:var(--shadow-lg),inset 0 1px 0 var(--glass-line);
+}
 .shot{display:block;background:#eef2f7;border-bottom:1px solid var(--line);overflow:hidden}
 .shot img{width:100%;height:190px;object-fit:cover;object-position:top center;transition:transform .35s ease}
 .card:hover .shot img{transform:scale(1.035)}
@@ -144,11 +168,17 @@ h2::after{
 /* ---------- skills ---------- */
 .skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.4rem}
 .skillset{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:1.15rem 1.25rem;box-shadow:var(--shadow);
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+  background:var(--glass);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge);border-radius:var(--radius);
+  padding:1.15rem 1.25rem;
+  box-shadow:var(--shadow),inset 0 1px 0 var(--glass-line);
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;
 }
-.skillset:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--teal)}
+.skillset:hover{
+  transform:translateY(-4px);background:var(--glass-hover);
+  border-color:rgba(44,166,164,.35);
+  box-shadow:var(--shadow-lg),inset 0 1px 0 var(--glass-line);
+}
 .skillset h3{font-size:.8rem;text-transform:uppercase;letter-spacing:.1em;color:var(--teal-dk);margin-bottom:.7rem}
 .skillset ul{list-style:none;margin:0;padding:0;display:grid;gap:.4rem}
 .skillset li{font-size:.92rem;color:var(--ink);padding-left:1rem;position:relative}
@@ -243,11 +273,17 @@ footer p{margin:0}
 /* same card as .skillset; role titles stay navy since they are names, not categories */
 .roles{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:1.4rem}
 .role-item{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);
-  padding:1.15rem 1.25rem;box-shadow:var(--shadow);
-  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+  background:var(--glass);backdrop-filter:var(--blur);-webkit-backdrop-filter:var(--blur);
+  border:1px solid var(--glass-edge);border-radius:var(--radius);
+  padding:1.15rem 1.25rem;
+  box-shadow:var(--shadow),inset 0 1px 0 var(--glass-line);
+  transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;
 }
-.role-item:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);border-color:var(--teal)}
+.role-item:hover{
+  transform:translateY(-4px);background:var(--glass-hover);
+  border-color:rgba(44,166,164,.35);
+  box-shadow:var(--shadow-lg),inset 0 1px 0 var(--glass-line);
+}
 .role-item h3{font-size:1rem;margin:0 0 .2rem;color:var(--navy)}
 .role-meta{
   font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;
@@ -255,12 +291,6 @@ footer p{margin:0}
 }
 .role-item p:last-child{font-size:.92rem;color:var(--ink);margin:0}
 
-@media (max-width:620px){
-  /* nav: keep Projects + Contact only */
-  .nav nav a:nth-child(2),
-  .nav nav a:nth-child(3),
-  .nav nav a:nth-child(4){display:none}
-}
 
 /* ---------- category tiles + sub-views ---------- */
 /* Two-up grid for the category tiles and the Excel cards. auto-fit collapses
@@ -280,7 +310,8 @@ section[id]{scroll-margin-top:74px}
   display:block;width:max-content;margin-bottom:1.1rem;
   font-size:.9rem;font-weight:600;color:var(--teal-dk);
 }
-.back:hover{text-decoration:underline}
+.back{transition:color .16s ease}
+.back:hover{color:var(--teal)}
 /* the tag sits on its own line under the back link, not beside it */
 #views .tag{display:inline-block;margin-bottom:.7rem}
 
@@ -315,3 +346,68 @@ section[id]{scroll-margin-top:74px}
 .detail-body p:last-of-type{margin-bottom:1.1rem}
 .detail-body code{font-size:.84em;background:#eef2f7;padding:.08em .35em;border-radius:4px}
 .detail-shot.narrow img{max-width:640px}
+
+
+/* Browsers without backdrop-filter get solid surfaces rather than
+   near-transparent ones, so nothing becomes unreadable. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .card,.skillset,.role-item{background:#fff}
+  .nav{background:rgba(255,255,255,.97)}
+  .band{background:var(--bg-alt)}
+}
+
+/* Respect users who ask for less motion */
+@media (prefers-reduced-motion:reduce){
+  .card,.skillset,.role-item,.crow,.shot img{transition:none}
+  .card:hover,.skillset:hover,.role-item:hover{transform:none}
+}
+
+
+/* ---------- cross-device ---------- */
+
+/* Touch devices have no real hover. Without this the lift "sticks" after a tap
+   and the card stays raised until you tap elsewhere. */
+@media (hover:none){
+  .card:hover,.skillset:hover,.role-item:hover{
+    transform:none;box-shadow:var(--shadow),inset 0 1px 0 var(--glass-line);
+    background:var(--glass);border-color:var(--glass-edge);
+  }
+  .card:hover .shot img{transform:none}
+  .crow:hover{background:transparent;padding-left:.4rem;padding-right:.4rem}
+  .crow:hover .crow-arrow{opacity:0;transform:translateX(-4px)}
+  /* give touch its own feedback instead */
+  .card:active,.skillset:active,.role-item:active{transform:scale(.99)}
+  .crow:active{background:#f2f8f8}
+}
+
+/* Phones: a full-strength blur on every surface is expensive to composite,
+   so lighten the blur and lean on opacity for legibility instead. */
+@media (max-width:620px){
+  :root{--blur:blur(8px) saturate(1.2)}
+  .card,.skillset,.role-item{background:rgba(255,255,255,.88)}
+  .nav{background:rgba(255,255,255,.92)}
+  body::before{background:
+    radial-gradient(24rem 20rem at 15% 6%, rgba(44,166,164,.09), transparent 62%),
+    radial-gradient(22rem 18rem at 85% 55%, rgba(27,42,74,.07), transparent 64%);}
+}
+
+/* Comfortable tap targets on touch */
+@media (pointer:coarse){
+  .nav nav a{padding:.35rem 0}
+  .crow{padding-top:1rem;padding-bottom:1rem}
+  .btn{padding:.7rem 1.2rem}
+}
+
+/* Small phones: nothing should ever scroll sideways */
+@media (max-width:400px){
+  .wrap{width:min(1120px,94vw)}
+  .section{padding:44px 0}
+  h2{font-size:1.45rem}
+  .tag{font-size:.63rem}
+  .crow-title{font-size:.92rem}
+}
+
+/* Large screens: keep line length readable rather than stretching forever */
+@media (min-width:1600px){
+  .wrap{width:min(1240px,88vw)}
+}
