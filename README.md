@@ -11,7 +11,7 @@ My personal portfolio. Live at **[lmrkmrcs.github.io](https://lmrkmrcs.github.io
 
 ## About
 
-Leomark Marcus, final-year BSc (Hons.) Mathematics with Computer Graphics at Universiti Malaysia Sabah, looking for entry-level Data Analyst and Software Developer roles in Kota Kinabalu.
+Leomark Marcus, final-year BSc (Hons.) Mathematics with Computer Graphics at Universiti Malaysia Sabah, looking for entry-level Software Developer roles in Kota Kinabalu.
 
 The site collects **eighteen projects**: eleven from the degree, covering deep learning, scientific visualisation, computer graphics, image processing, relational databases and data analysis, and seven built during an internship at a palm oil mill in Sabah. It also lists the eleven National Training Week 2026 certificates, each with its own page and a copy of the certificate.
 
