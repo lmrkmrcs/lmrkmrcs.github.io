@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,87 +8,91 @@
 <meta property="og:title" content="Leomark Marcus | Software Developer">
 <meta property="og:description" content="Final-year Mathematics with Computer Graphics student with internship experience building software and data systems.">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="style.css?v=059b32ef">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231B2A4A'/><text y='.9em' x='50%25' text-anchor='middle' font-size='60' fill='%232CA6A4' font-family='sans-serif' font-weight='bold'>L</text></svg>">
+<meta property="og:url" content="https://lmrkmrcs.github.io/">
+<meta property="og:image" content="https://lmrkmrcs.github.io/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Leomark Marcus, Software Developer, Kota Kinabalu, Sabah">
+<meta name="twitter:card" content="summary_large_image">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=r4">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23101010'/><path d='M32.5 24h13v39h22v13H32.5z' fill='%23D4BCDD'/></svg>">
 </head>
 <body>
+<div class="glow" aria-hidden="true"></div>
+<div class="layout">
 
-<header class="nav">
-  <div class="wrap nav-inner">
-    <a href="#top" class="brand">LM</a>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#certs">Certifications</a>
-      <a href="#leadership">Leadership</a>
-      <a href="#contact">Contact</a>
-    </nav>
+<aside class="profile">
+  <div class="profile-card">
+    <a href="#top" class="brand"><span class="brand-mark">LM</span><span class="brand-name">Leomark<br>Marcus</span></a>
+    <img class="avatar" src="assets/photo.jpg" alt="Leomark Marcus" width="248" height="333">
+    <dl class="pmeta">
+      <div><dt>Specialization</dt><dd>Software developer<br>and data tools</dd></div>
+      <div><dt>Based in</dt><dd>Kota Kinabalu, Sabah</dd></div>
+    </dl>
+    <div class="socials">
+      <a href="https://github.com/lmrkmrcs" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="https://www.linkedin.com/in/leomarkmarcus" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></a>
+      <a href="mailto:leomark.marcus0202@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></a>
+      <a href="assets/Leomark_Marcus_CV.pdf" download aria-label="Download CV" title="Download CV"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <a class="btn primary block" href="#contact">Let&rsquo;s Work Together</a>
+  </div>
+</aside>
+
+<div class="content">
+<header class="topbar">
+  <nav class="pills" aria-label="Sections">
+    <a href="#top" data-nav="top">Home</a>
+    <a href="#projects" data-nav="projects">Portfolio</a>
+    <a href="#about" data-nav="about">About Me</a>
+    <a href="#resume" data-nav="resume">Resume</a>
+    <a href="#contact" data-nav="contact">Contact</a>
+  </nav>
+  <div class="top-actions">
+    <button class="theme-toggle" type="button" aria-label="Switch light or dark mode" title="Light / dark"><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></button>
+    <a class="btn primary small" href="mailto:leomark.marcus0202@gmail.com">Let&rsquo;s Talk</a>
   </div>
 </header>
 
 <main id="home">
 
-<!-- ===== HERO ===== -->
-<section id="top" class="hero">
-  <div class="wrap hero-inner">
-    <img class="avatar" src="assets/photo.jpg" alt="Leomark Marcus" width="248" height="333">
-    <div class="hero-text">
-      <p class="eyebrow">Kota Kinabalu, Sabah &middot; Malaysia</p>
-      <h1>Leomark Marcus</h1>
-      <p class="role">Software Developer</p>
-      <p class="pitch">
-        Final-year <strong>Mathematics with Computer Graphics</strong> student at Universiti Malaysia Sabah.
-        I spent my internship building software that people actually use every day: supplier
-        management, budgeting and asset tracking systems for a palm oil mill. My final year
-        project was on deep learning for thermal object detection.
-      </p>
-      <div class="cta">
-        <a class="btn primary" href="assets/Leomark_Marcus_Resume.pdf" download>Download Resume</a>
-        <a class="btn primary" href="assets/Leomark_Marcus_CV.pdf" download>Download CV</a>
-        <a class="btn" href="https://github.com/lmrkmrcs" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/leomarkmarcus" target="_blank" rel="noopener">LinkedIn</a>
-        <a class="btn" href="mailto:leomark.marcus0202@gmail.com">Email</a>
-      </div>
-    </div>
+<section id="top" class="hero wrap">
+  <span class="kicker">Let&rsquo;s meet!</span>
+  <h1>I&rsquo;m Leomark Marcus<br><span class="accent">Software developer who builds tools for real work.</span></h1>
+  <p class="pitch">
+    Final-year <strong>Mathematics with Computer Graphics</strong> student at Universiti Malaysia Sabah.
+    I spent my internship building software that people actually use every day: supplier
+    management, budgeting and asset tracking systems for a palm oil mill. My final year
+    project was on deep learning for thermal object detection.
+  </p>
+  <div class="cta">
+    <a class="btn primary" href="#projects">My Works</a>
+    <a class="btn" href="assets/Leomark_Marcus_CV.pdf" download>Download CV</a>
+    <a class="btn" href="assets/Leomark_Marcus_Resume.pdf" download>Download Resume</a>
   </div>
+  <a class="badge" href="#projects" aria-label="Scroll to my work">
+    <svg viewBox="0 0 120 120" aria-hidden="true">
+      <defs><path id="circ" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"/></defs>
+      <text><textPath href="#circ" textLength="286" lengthAdjust="spacing">OPEN TO WORK &#183; SOFTWARE DEVELOPER &#183; </textPath></text>
+    </svg>
+    <span class="badge-arrow">&darr;</span>
+  </a>
 </section>
 
-<!-- ===== ABOUT ===== -->
-<section class="band">
-  <div class="wrap about-grid">
-    <div>
-      <h2>About</h2>
-      <p>
-        I like problems where the data is messy and the constraints are real. During my internship at a
-        palm oil mill in Sabah I built systems for staff with no admin rights on ageing Windows machines,
-        working from spreadsheets that had drifted into four different shapes, which taught me more than any tidy dataset could.
-      </p>
-      <p>
-        I&rsquo;m looking for an <strong>entry-level Software Developer</strong> role in
-        Kota Kinabalu, where I can keep working on that intersection of data, tooling and the people who
-        have to use it.
-      </p>
-    </div>
-    <dl class="facts">
-      <div><dt>Degree</dt><dd>BSc (Hons.) Mathematics with Computer Graphics</dd></div>
-      <div><dt>University</dt><dd>Universiti Malaysia Sabah</dd></div>
-      <div><dt>Graduating</dt><dd>November 2026 &middot; CGPA 3.05</dd></div>
-      <div><dt>Internship</dt><dd>Software Developer Intern, palm oil mill (Mar&ndash;Aug 2026)</dd></div>
-      <div><dt>Languages</dt><dd>Malay &amp; Kadazan-Dusun (native), English (fluent)</dd></div>
-    </dl>
-  </div>
-</section>
-
-<!-- ===== PROJECTS ===== -->
 <section id="projects" class="wrap section">
-  <h2>Projects</h2>
-  <p class="lede">Eighteen things I&rsquo;ve built, grouped by where they came from. Pick a category to open it.</p>
+  <span class="kicker">Portfolio</span>
+  <h2>Check out my featured work</h2>
+  <p class="lede">Nineteen things I&rsquo;ve built, plus what I learned in the K-Youth programme. Pick a category to open it.</p>
 
-  <div class="grid grid-2">
+  <div class="grid grid-3">
 
     <article class="card">
       <a class="shot" href="#/uni">
-        <img src="assets/projects/01_fyp.jpg" alt="Thermal detection with bounding boxes on cars and a pedestrian" loading="lazy">
+        <img src="assets/covers/university.jpg" alt="Thermal detection with bounding boxes on cars and a pedestrian" loading="lazy">
       </a>
       <div class="card-body">
         <span class="tag">University</span>
@@ -101,7 +105,7 @@
 
     <article class="card">
       <a class="shot" href="#/internship">
-        <img src="assets/projects/04_ffb.jpg" alt="FFB supplier management table" loading="lazy">
+        <img src="assets/covers/internship.jpg" alt="FFB supplier management table" loading="lazy">
       </a>
       <div class="card-body">
         <span class="tag tag-work">Internship</span>
@@ -112,12 +116,88 @@
       </div>
     </article>
 
+  
+    <article class="card">
+      <a class="shot" href="#/kyouth">
+        <img src="assets/covers/kyouth.jpg" alt="A memo, a company primer and a poster from the K-Youth programme" loading="lazy">
+      </a>
+      <div class="card-body">
+        <span class="tag tag-design">Training</span>
+        <h3>K-Youth Development Programme</h3>
+        <p>What I learned in a Khazanah Nasional youth development programme: framing problems, writing a one-page memo and a company primer, deciding with an options matrix, and turning a document into an AI video.</p>
+        <p class="stack">Problem solving &middot; Business writing &middot; ChatGPT &middot; Synthesia</p>
+        <a class="link" href="#/kyouth">See what I learned &rarr;</a>
+      </div>
+    </article>
+</div>
+</section>
+
+<section id="about" class="wrap section">
+  <span class="kicker">About me</span>
+  <h2>Turning messy data into tools people use</h2>
+  <div class="stats">
+    <div><strong>19</strong><span>Projects built</span></div>
+    <div><strong>11</strong><span>Certificates in 2026</span></div>
+    <div><strong>6</strong><span>Months as a software intern</span></div>
+    <div><strong>4</strong><span>Years organising events</span></div>
+  </div>
+  <div class="about-grid">
+    <div>
+      <p>
+        I like problems where the data is messy and the constraints are real. During my internship at a
+        palm oil mill in Sabah I built systems for staff with no admin rights on ageing Windows machines,
+        working from spreadsheets that had drifted into four different shapes, which taught me more than any tidy dataset could. Now I want to take the next step in a real IT company,
+        where I can learn from experienced engineers and build a proper foundation for a long career in tech.
+      </p>
+      <p>
+        I&rsquo;m looking for an <strong>entry-level Software Developer</strong> role in
+        Kota Kinabalu. I&rsquo;m also starting to learn <strong>cloud</strong>: how software is deployed,
+        hosted and scaled, because good developers understand where their code runs.
+      </p>
+    </div>
+    <dl class="facts">
+      <div><dt>Degree</dt><dd>BSc (Hons.) Mathematics with Computer Graphics</dd></div>
+      <div><dt>University</dt><dd>Universiti Malaysia Sabah</dd></div>
+      <div><dt>Graduating</dt><dd>November 2026 &middot; CGPA 3.05</dd></div>
+      <div><dt>Internship</dt><dd>Software Developer Intern, palm oil mill (Mar&ndash;Aug 2026)</dd></div>
+      <div><dt>Languages</dt><dd>Malay &amp; Kadazan-Dusun (native), English (fluent)</dd></div>
+    </dl>
+  </div>
+
+  <h3 class="subhead">What I do</h3>
+  <div class="services">
+    <div class="service"><span class="s-icon"><svg viewBox="0 0 24 24"><path d="m8 7-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><h4>Desktop &amp; internal tools</h4><p>Python and PyQt apps that run on locked-down office PCs, packaged so nothing needs installing.</p></div>
+    <div class="service"><span class="s-icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 9.5h17M9 9.5v10M14.5 9.5v10" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span><h4>Data &amp; automation</h4><p>Cleaning messy spreadsheets with pandas and Power Query, Excel automation, Power BI reports.</p></div>
+    <div class="service"><span class="s-icon"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><rect x="8" y="8.5" width="6" height="5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-dasharray="2 1.5"/></svg></span><h4>Machine learning</h4><p>Computer vision with PyTorch and YOLOv5, from training to a usable dashboard.</p></div>
+    <div class="service"><span class="s-icon"><svg viewBox="0 0 24 24"><path d="M4 20l4-1 10.5-10.5a2.1 2.1 0 0 0-3-3L5 16l-1 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></span><h4>Interface design</h4><p>Figma prototypes and clean layouts, so the tool makes sense to the people using it.</p></div>
   </div>
 </section>
-<!-- ===== SKILLS ===== -->
+
+<section id="resume" class="wrap section">
+  <span class="kicker">Resume</span>
+  <h2>Education and experience</h2>
+  <div class="timeline-wrap">
+    <div>
+      <h3 class="subhead">Experience</h3>
+      <ol class="timeline">
+        <li><span class="t-when">Sep &ndash; Oct 2026</span><div><h4>K-Youth Development Programme</h4><p class="t-where">Khazanah Nasional initiative</p><p>Scenario-based training in problem solving, professional communication and digital tools. <a href="#/kyouth">See what I learned &rarr;</a></p></div></li>
+        <li><span class="t-when">Mar &ndash; Aug 2026</span><div><h4>Software Developer Intern</h4><p class="t-where">Palm oil mill, Sabah</p><p>Built and handed over five systems and two spreadsheets for supplier management, budgeting, HR and asset tracking. <a href="#/internship">View projects &rarr;</a></p></div></li>
+      </ol>
+    </div>
+    <div>
+      <h3 class="subhead">Education</h3>
+      <ol class="timeline">
+        <li><span class="t-when">Graduating Nov 2026</span><div><h4>BSc (Hons.) Mathematics with Computer Graphics</h4><p class="t-where">Universiti Malaysia Sabah &middot; CGPA 3.05</p><p>Final year project: transfer learning for thermal object detection with YOLOv5. <a href="#/uni">View university projects &rarr;</a></p></div></li>
+        <li><span class="t-when">Jul 2026</span><div><h4>National Training Week 2026</h4><p class="t-where">11 certificates</p><p>Data analytics, AI and automation, cybersecurity and productivity. <a href="#certs">View certificates &rarr;</a></p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
 <section id="skills" class="band">
   <div class="wrap section">
-    <h2>Skills</h2>
+    <span class="kicker">Toolkit</span>
+    <h2>Skills and tools</h2>
     <div class="skills">
       <div class="skillset">
         <h3>Core Development</h3>
@@ -140,13 +220,12 @@
         <ul><li>Figma</li><li>UI/UX prototyping</li><li>HTML &amp; CSS</li><li>Canva</li></ul>
       </div>
     </div>
-    </div>
   </div>
 </section>
 
-<!-- ===== CERTIFICATIONS ===== -->
 <section id="certs" class="wrap section">
-  <h2>Certifications</h2>
+  <span class="kicker">Certifications</span>
+  <h2>Always learning</h2>
   <p class="lede">11 certificates earned during <strong>National Training Week 2026</strong>, 11 to 26 July. Click any certificate to open it.</p>
       <h3 class="ghead">Data &amp; Analytics<span class="gcount">4</span></h3>
     <div class="glist">
@@ -272,10 +351,10 @@
     </div>
 </section>
 
-<!-- ===== LEADERSHIP ===== -->
 <section id="leadership" class="band">
   <div class="wrap section">
-    <h2>Leadership &amp; Activities</h2>
+    <span class="kicker">Leadership</span>
+    <h2>Leadership &amp; activities</h2>
     <p class="lede">Four years of organising faculty events alongside my degree, from committee member to directing my own programme.</p>
     <div class="roles">
       <div class="role-item">
@@ -302,24 +381,103 @@
   </div>
 </section>
 
-<!-- ===== CONTACT ===== -->
-<section id="contact" class="contact">
-  <div class="wrap">
-    <h2>Get in touch</h2>
-    <p>Open to entry-level Software Developer roles in Kota Kinabalu and across Sabah.</p>
-    <div class="cta">
-      <a class="btn primary" href="mailto:leomark.marcus0202@gmail.com">leomark.marcus0202@gmail.com</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/leomarkmarcus" target="_blank" rel="noopener">LinkedIn</a>
-      <a class="btn ghost" href="https://github.com/lmrkmrcs" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn ghost" href="assets/Leomark_Marcus_Resume.pdf" download>Resume (PDF)</a>
-      <a class="btn ghost" href="assets/Leomark_Marcus_CV.pdf" download>CV (PDF)</a>
-    </div>
+
+<section id="contact" class="wrap section contact">
+  <span class="kicker">Contact</span>
+  <h2>Let&rsquo;s build something useful together</h2>
+  <p class="lede">Open to entry-level Software Developer roles in Kota Kinabalu and across Sabah. The quickest way to reach me is email.</p>
+  <div class="contact-grid">
+    <a class="contact-card" href="mailto:leomark.marcus0202@gmail.com"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span><small>Email</small>leomark.marcus0202@gmail.com</span></a>
+    <a class="contact-card" href="https://www.linkedin.com/in/leomarkmarcus" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span><small>LinkedIn</small>leomarkmarcus</span></a>
+    <a class="contact-card" href="https://github.com/lmrkmrcs" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><small>GitHub</small>lmrkmrcs</span></a>
+    <a class="contact-card" href="assets/Leomark_Marcus_CV.pdf" download><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 19h14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span><small>Download</small>CV (PDF)</span></a>
   </div>
 </section>
 
 </main>
 
 <div id="views">
+
+<section id="v-kyouth" class="wrap section" hidden>
+  <a class="back" href="#projects">&larr; Back to Portfolio</a>
+  <span class="tag tag-design">Training &middot; 2026</span>
+  <h2>K-Youth Development Programme</h2>
+  <p class="lede">A youth development programme by Khazanah Nasional that teaches through business scenarios. In Scenario 1 we played executives on a rotation programme at a healthcare group, with IHH Healthcare as the case study, and practised problem solving, professional communication and digital tools. Below is what I learned, with the work produced in class.</p>
+  <p class="note">These are training exercises with fictional roles. They are not official IHH Healthcare documents.</p>
+
+  <div class="grid grid-2 ky-grid">
+
+    <article class="card">
+      <a class="shot" href="assets/kyouth/problem-framing-infographic.jpg" target="_blank" rel="noopener">
+        <img src="assets/kyouth/problem-framing-infographic.jpg" alt="Infographic: why it is important to accurately identify problems" loading="lazy" style="object-position: top">
+      </a>
+      <div class="card-body">
+        <span class="tag">Problem solving</span>
+        <h3>Getting to the right problem</h3>
+        <p><strong>What I learned:</strong> to slow down before solving. The SCQ method (situation, complication, question) and reframing turn a vague request into a clear problem statement, which saves effort and avoids fixing the wrong thing.</p>
+        <p class="stack">SCQ &middot; Reframing &middot; Infographic</p>
+        <a class="link" href="assets/kyouth/problem-framing-infographic.jpg" target="_blank" rel="noopener">Open infographic &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="assets/kyouth/sustainability-memo.pdf" target="_blank" rel="noopener">
+        <img src="assets/kyouth/sustainability-memo.jpg" alt="One-page memo summarising a sustainability report" loading="lazy" style="object-position: top">
+      </a>
+      <div class="card-body">
+        <span class="tag">Communication</span>
+        <h3>A one-page memo from a 77-page report</h3>
+        <p><strong>What I learned:</strong> to pull only what a specific reader needs out of a long report, and to write it with the 7Cs: clear, concise, concrete, correct, coherent, complete and courteous. ChatGPT helped refine the draft, then every figure was checked against the source.</p>
+        <p class="stack">Business writing &middot; 7Cs &middot; ChatGPT &middot; Word</p>
+        <a class="link" href="assets/kyouth/sustainability-memo.pdf" target="_blank" rel="noopener">Open memo (PDF) &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="assets/kyouth/options-assessment-workshop.pdf" target="_blank" rel="noopener">
+        <img src="assets/kyouth/options-assessment-workshop.jpg" alt="De-constrain worksheet on making school project meetings more efficient" loading="lazy" style="object-position: top">
+      </a>
+      <div class="card-body">
+        <span class="tag">Problem solving</span>
+        <h3>From many ideas to one decision</h3>
+        <p><strong>What I learned:</strong> a full define, diverge and converge cycle on a practice case (making project meetings more efficient): challenge hidden beliefs with De-constrain, generate options with a Creative Matrix, then weigh them in an Options Assessment Matrix and state the trade-offs.</p>
+        <p class="stack">De-constrain &middot; Creative Matrix &middot; Options Assessment Matrix</p>
+        <a class="link" href="assets/kyouth/options-assessment-workshop.pdf" target="_blank" rel="noopener">Open worksheets (PDF) &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="assets/kyouth/ihh-company-primer.pdf" target="_blank" rel="noopener">
+        <img src="assets/kyouth/ihh-company-primer.jpg" alt="Cover of a company primer for new recruits" loading="lazy" style="object-position: top">
+      </a>
+      <div class="card-body">
+        <span class="tag">Communication</span>
+        <h3>A company primer for new recruits</h3>
+        <p><strong>What I learned:</strong> to write for a new joiner rather than for the company: who we are, what we do, how we work and how you can grow. Facts were checked against the annual report, and the draft was refined with ChatGPT after supervisor-style feedback.</p>
+        <p class="stack">Audience &middot; Structure &middot; Fact-checking &middot; ChatGPT</p>
+        <a class="link" href="assets/kyouth/ihh-company-primer.pdf" target="_blank" rel="noopener">Open primer (PDF) &rarr;</a>
+      </div>
+    </article>
+
+    <article class="card">
+      <a class="shot" href="assets/kyouth/ai-video-poster.jpg" target="_blank" rel="noopener">
+        <img src="assets/kyouth/ai-video-poster.jpg" alt="Poster: how AI video brings value to my first job" loading="lazy" style="object-position: top">
+      </a>
+      <div class="card-body">
+        <span class="tag">Digital &amp; AI</span>
+        <h3>Turning documents into AI video</h3>
+        <p><strong>What I learned:</strong> to script a short video, build it with an AI avatar in Synthesia, and keep it to the key points a viewer needs. A long document becomes a two-minute video that people actually watch.</p>
+        <p class="stack">Synthesia &middot; Scriptwriting &middot; GenAI</p>
+        <div class="links-row">
+          <a class="link" href="https://share.synthesia.io/118ab1fe-eb26-415b-a9b3-9fa729dbc03e" target="_blank" rel="noopener">Watch: my professional introduction &rarr;</a>
+          <a class="link" href="https://share.synthesia.io/e169bb22-cf48-4d3f-a10b-7dfbd1410814" target="_blank" rel="noopener">Watch: primer video for new recruits &rarr;</a>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
 
 <section id="v-uni" class="wrap section" hidden>
   <a class="back" href="#projects">&larr; Back to Projects</a>
@@ -937,30 +1095,18 @@
 </section>
 </div>
 
-<footer>
-  <div class="wrap">
-    <p>&copy; 2026 Leomark Marcus &middot; Kota Kinabalu, Sabah</p>
-  
 
-
-
-
-
-
-
-
-
-
-
-</div>
+<footer class="wrap">
+  <p>&copy; 2026 Leomark Marcus &middot; Kota Kinabalu, Sabah</p>
 </footer>
-
+</div><!-- /content -->
+</div><!-- /layout -->
 
 <script>
 /* Hash router. "#/name" opens a sub-view and hides the home page;
    anything else (or nothing) shows home and scrolls to that anchor. */
 (function () {
-  var VIEWS = ['uni', 'internship', 'leave-record', 'budget-workbook']
+  var VIEWS = ['uni', 'internship', 'leave-record', 'budget-workbook', 'kyouth']
       .concat(Array.prototype.map.call(
         document.querySelectorAll('[id^="v-cert-"]'),
         function (el) { return el.id.slice(2); }
@@ -979,11 +1125,99 @@
 
     if (open) {
       window.scrollTo(0, 0);
+      reveal(document.getElementById('v-' + open));
     } else if (hash.length > 1) {
       var target = document.getElementById(hash.slice(1));
       if (target) target.scrollIntoView();
     }
   }
+
+  /* Theme toggle (dark is the default) */
+  var btn = document.querySelector('.theme-toggle');
+  btn.addEventListener('click', function () {
+    var next = document.documentElement.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+
+  /* Fade-in on scroll. A plain scroll check (no IntersectionObserver).
+     Items animate as they come into view; cards in the same row are staggered,
+     and the stats count up. Items already on screen are shown right away. */
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var SEL = '.section > *, .card, .service, .stats > div, .timeline li, .role-item, .skillset, .crow, .contact-card';
+  var GROUPS = '.grid, .services, .stats, .skills, .roles, .glist, .contact-grid, .timeline';
+
+  function countUp(el) {
+    var n = el.querySelector('strong');
+    if (!n) return;
+    if (!n.dataset.end) n.dataset.end = n.textContent;
+    var end = parseInt(n.dataset.end, 10); if (isNaN(end)) return;
+    var t0 = null, dur = 1200;
+    function step(t) {
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      n.textContent = Math.round(end * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  /* Items animate in as they enter the screen. When an item goes back below
+     the screen it resets, so it plays again the next time you scroll down to it.
+     Items above the screen stay visible, so scrolling up never flickers. */
+  function check() {
+    var vh = window.innerHeight, limit = vh * 0.9;
+    document.querySelectorAll('.rv').forEach(function (el) {
+      var r = el.getBoundingClientRect();
+      var shown = el.classList.contains('in');
+      if (!shown && r.top < limit) {
+        el.classList.add('in');
+        if (el.parentElement && el.parentElement.classList.contains('stats')) countUp(el);
+      } else if (shown && r.top > vh + 40) {
+        el.classList.remove('in');
+      }
+    });
+  }
+
+  function reveal(root) {
+    if (reduce || !root) return;
+    root.querySelectorAll(SEL).forEach(function (el) {
+      if (!el.classList.contains('in')) el.classList.add('rv');
+    });
+    /* stagger siblings inside each grid/list */
+    root.querySelectorAll(GROUPS).forEach(function (g) {
+      Array.prototype.forEach.call(g.children, function (c, i) {
+        c.style.transitionDelay = Math.min(i % 6, 5) * 90 + 'ms';
+      });
+    });
+    requestAnimationFrame(check);
+    setTimeout(check, 600);
+  }
+  window.addEventListener('scroll', check, { passive: true });
+  window.addEventListener('resize', check);
+  reveal(document.getElementById('home'));
+
+  /* Keep the whole profile card reachable on short screens: if it is taller
+     than the window, let it scroll up until its bottom shows, then stick. */
+  var card = document.querySelector('.profile-card');
+  function fitCard() {
+    if (!card || window.innerWidth <= 900) { if (card) card.style.top = ''; return; }
+    card.style.top = Math.min(32, window.innerHeight - card.offsetHeight - 16) + 'px';
+  }
+  window.addEventListener('resize', fitCard);
+  window.addEventListener('load', fitCard);
+  fitCard();
+
+  /* Highlight the active menu pill */
+  var pills = document.querySelectorAll('[data-nav]');
+  var spy = ('IntersectionObserver' in window) ? new IntersectionObserver(function (es) {
+    es.forEach(function (e) {
+      if (e.isIntersecting) pills.forEach(function (p) { p.classList.toggle('active', p.getAttribute('data-nav') === e.target.id); });
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' }) : null;
+  if (spy) ['top', 'projects', 'about', 'resume', 'contact'].forEach(function (id) {
+    var el = document.getElementById(id); if (el) spy.observe(el);
+  });
 
   window.addEventListener('hashchange', render);
   render();
