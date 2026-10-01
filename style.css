@@ -356,3 +356,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
   .rv { opacity: 1 !important; transform: none !important; }
   .glow, .topbar, .badge { display: none; }
 }
+
+/* Project covers: dark and light versions follow the theme */
+.cover-light { display: none; }
+[data-theme="light"] .cover-dark { display: none; }
+[data-theme="light"] .cover-light { display: block; }
