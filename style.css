@@ -328,15 +328,20 @@ footer { padding: 60px 0 40px; color: var(--muted); font-size: .85rem; }
   .profile-card .pmeta { margin: 0 0 10px; gap: 8px; }
   .profile-card .socials { margin: 0; }
   .profile-card .btn.block { grid-column: 1 / -1; margin-top: 16px; }
-  .topbar { top: 0; padding: 10px 0; flex-wrap: nowrap; }
+  .topbar {
+    top: 0; padding: 10px 16px; margin: 0 -16px; flex-wrap: nowrap;
+    background: color-mix(in srgb, var(--bg) 86%, transparent);
+    -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+    border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent);
+  }
   .pills { overflow-x: auto; scrollbar-width: none; }
   .pills::-webkit-scrollbar { display: none; }
   .pills a { white-space: nowrap; padding: 7px 12px; font-size: .85rem; }
   .top-actions .btn { display: none; }
-  .hero { padding: 60px 0 40px; min-height: 0; }
-  .badge { position: relative; right: auto; bottom: auto; margin-top: 30px; }
+  .hero { padding: 44px 0 0; min-height: 0; }
+  .badge { position: relative; right: auto; bottom: auto; margin-top: 26px; width: 100px; height: 100px; }
   .about-grid, .timeline-wrap, .services { grid-template-columns: 1fr; }
-  .section { padding-top: 60px; }
+  .section { padding-top: 48px; }
   .grid-2 { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
