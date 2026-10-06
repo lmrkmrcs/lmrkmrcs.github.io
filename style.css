@@ -134,6 +134,12 @@ strong { color: var(--text); font-weight: 600; }
 .btn.ghost { background: transparent; }
 .btn.small { padding: 9px 18px; font-size: .88rem; }
 .btn.block { display: flex; justify-content: center; width: 100%; }
+/* Profile card: light outline button (all screen sizes) */
+.profile-card .btn.block {
+  padding: 10px 16px; font-size: .88rem; font-weight: 600;
+  background: transparent; color: var(--accent); border: 1.5px solid var(--accent);
+}
+.profile-card .btn.block:hover { background: var(--accent); color: var(--accent-ink); }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
 /* ===== Sections ===== */
@@ -331,12 +337,7 @@ footer { padding: 60px 0 40px; color: var(--muted); font-size: .85rem; }
   .profile-card .pmeta { margin: 0 0 10px; gap: 8px; }
   .profile-card .socials { margin: 0; }
   .profile-card .btn.block { grid-column: 1 / -1; margin-top: 16px; }
-  /* Phone: lighter outline button instead of the big solid one */
-  .profile-card .btn.block {
-    margin-top: 12px; padding: 9px 16px; font-size: .86rem; font-weight: 600;
-    background: transparent; color: var(--accent); border: 1.5px solid var(--accent);
-  }
-  .profile-card .btn.block:hover { background: var(--accent); color: var(--accent-ink); }
+  .profile-card .btn.block { margin-top: 12px; }
   .topbar {
     top: 0; padding: 10px 16px; margin: 0 -16px; flex-wrap: nowrap;
     background: color-mix(in srgb, var(--bg) 86%, transparent);
