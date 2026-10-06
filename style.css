@@ -328,6 +328,12 @@ footer { padding: 60px 0 40px; color: var(--muted); font-size: .85rem; }
   .profile-card .pmeta { margin: 0 0 10px; gap: 8px; }
   .profile-card .socials { margin: 0; }
   .profile-card .btn.block { grid-column: 1 / -1; margin-top: 16px; }
+  /* Phone: lighter outline button instead of the big solid one */
+  .profile-card .btn.block {
+    margin-top: 12px; padding: 9px 16px; font-size: .86rem; font-weight: 600;
+    background: transparent; color: var(--accent); border: 1.5px solid var(--accent);
+  }
+  .profile-card .btn.block:hover { background: var(--accent); color: var(--accent-ink); }
   .topbar {
     top: 0; padding: 10px 16px; margin: 0 -16px; flex-wrap: nowrap;
     background: color-mix(in srgb, var(--bg) 86%, transparent);
@@ -345,9 +351,8 @@ footer { padding: 60px 0 40px; color: var(--muted); font-size: .85rem; }
   .grid-2 { grid-template-columns: 1fr; }
 }
 @media (max-width: 480px) {
-  .pills a[data-nav="top"] { display: none; }
   .pills { gap: 0; padding: 4px; }
-  .pills a { padding: 7px 7px; font-size: .78rem; }
+  .pills a { padding: 7px 5px; font-size: .72rem; letter-spacing: -.01em; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
   .stats strong { font-size: 1.7rem; }
   .crow { flex-direction: column; align-items: flex-start; gap: 4px; }
