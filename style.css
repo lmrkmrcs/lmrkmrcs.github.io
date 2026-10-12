@@ -237,6 +237,10 @@ strong { color: var(--text); font-weight: 600; }
 /* ===== Resume timeline ===== */
 .timeline-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
 .timeline-wrap .subhead { margin-top: 10px; }
+/* both columns same height, rows stretch so the top and bottom lines line up */
+.timeline-wrap > div { display: flex; flex-direction: column; }
+.timeline-wrap .timeline { flex: 1; display: flex; flex-direction: column; }
+.timeline-wrap .timeline li { flex: 1; }
 .timeline { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .timeline li { display: grid; grid-template-columns: 130px 1fr; gap: 18px; padding: 20px 0; border-bottom: 1px solid var(--line); }
 .t-when { font-size: .85rem; color: var(--muted); padding-top: 2px; }
