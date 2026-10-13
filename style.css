@@ -218,6 +218,8 @@ strong { color: var(--text); font-weight: 600; }
 .stats span { color: var(--muted); font-size: .88rem; }
 .about-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 36px; align-items: start; }
 .about-grid p { color: var(--muted); margin-top: 0; }
+.about-grid .about-next { color: var(--text, inherit); font-weight: 500; }
+.about-grid .about-next a { color: var(--accent); white-space: nowrap; }
 .facts { margin: 0; display: grid; gap: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 22px; }
 .facts dt { font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
 .facts dd { margin: 2px 0 0; font-weight: 500; }
